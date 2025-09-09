@@ -42,32 +42,32 @@ const TotalVisitcard = () => {
     setData(cardData);
   }, []);
   return (
-    <div className="flex items-center justify-center w-auto space-x-8 mt-11 mx-auto ">
+    <div className="flex items-center justify-center flex-wrap lg:flex-nowrap  w-auto lg:space-x-8 space-y-4 mt-11 mx-auto ">
       {data.map((item, index) => {
         return (
           <div
-            className="flex flex-col gap-8  w-[28rem] justify-center bg-white  rounded-2xl px-7 pb-7"
+            className="flex flex-col lg:gap-8 gap-4  lg:w-[28rem] w-[80%] justify-center bg-white  rounded-2xl px-7 pb-7"
             key={index}
           >
-            <div className="h-10 w-auto mt-10">
+            <div className="lg:h-10 h-7 w-auto mt-10">
               <Image src={item.img} alt="image" className="h-full w-auto" />
             </div>
             <div className="flex items-center justify-between">
-              <div className="flex gap-16 items-center justify-between ">
+              <div className="flex lg:gap-16 gap-8 items-center justify-between ">
                 <div className="flex flex-col">
-                  <h3 className="text-3xl text-blue-900 font-futura font-bold">
+                  <h3 className="lg:text-3xl text-xl text-blue-900 font-futura font-bold">
                     {item.visitor}
                   </h3>
-                  <p className="text-[1rem] tracking-wide capitalize text-textB">
+                  <p className="lg:text-[1rem] text-sm  tracking-wide capitalize text-textB">
                     {item.heading[0]}
                   </p>
                 </div>
                 <hr className="h-15 w-[1px] bg-[#ccc] border-0 outline-0" />
                 <div className="">
-                  <h3 className="text-3xl text-blue-900 font-futura font-bold">
+                  <h3 className="lg:text-3xl text-xl text-blue-900 font-futura font-bold">
                     {item.AuTotal}
                   </h3>
-                  <p className="text-[1rem] tracking-wide capitalize text-textB">
+                  <p className="lg:text-[1rem] text-sm  tracking-wide capitalize text-textB">
                     {item.heading[1]}
                   </p>
                 </div>

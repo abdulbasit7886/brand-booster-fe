@@ -1,38 +1,75 @@
-import React from "react";
+import React, { useState } from "react";
 import NavLink from "../../data/NavLink";
 import logo from "../../asset/logo/logo.png";
 import boostIcon from "../../asset/icons/booster.png";
 import Image from "next/image";
+import { FaBars, FaX } from "react-icons/fa6";
 
 const Navigation = () => {
+  const [active, setActive] = useState<boolean>(false);
+
+  const handleActive = () => {
+    setActive(!active);
+  };
+
   return (
-    <div className=" w-[95%] lg:w-[91.1%] h-15 lg:h-20 z-10  font-Inter fixed  top-5 left-[4.45%]  flex items-center justify-between px-3 pr-4 pl-6 bg-white rounded-[50px]">
-      <div className="  ">
+    <div className="lg:w-[91.1%] w-[95%] h-15 lg:h-20 z-10 font-Inter fixed px-5 lg:top-5 lg:left-[4.45%] left-[2.5%] top-4 flex items-center justify-between lg:px-3 lg:pr-4 lg:pl-6 pr-6 pl-4 bg-white rounded-[50px]">
+      <div>
         <Image
           src={logo}
           alt=""
-          className="h-12 w-36.375"
+          className="lg:h-12 lg:w-36.375"
           style={{ height: "48px", width: "auto" }}
         />
       </div>
-      <ul className="flex items-center gap-3  ">
-        {NavLink.map((link, index) => {
-          return (
-            <li
-              key={index}
-              className="flex items-center text-lg leading-[120%] gap-2 capitalize  px-1.5 py-1 text-[#414651] cursor-pointer"
-            >
-              <p>{link.name}</p>
-              <span className="flex  items-center justify-center text-textB">
-                {link.icon}
-              </span>
-            </li>
-          );
-        })}
-      </ul>
-      <div className="flex items-center w-[12.31rem] h-15  justify-center  gap-3 cursor-pointer rounded-full bg-gradient-to-tr from-sky to-blue text-white ">
-        <Image src={boostIcon} alt="" className="h-5 w-auto" />
-        <p className="text-xl">Boost now</p>
+      <div
+        className={`
+        lg:flex lg:items-center lg:gap-3 
+        absolute top-full left-0 right-0 mt-2 lg:mt-0
+        lg:rounded-none rounded-2xl 
+        lg:relative lg:top-auto lg:px-auto lg:py-auto 
+        py-7 px-5 lg:bg-transparent bg-white 
+        lg:w-auto w-full
+        transition-all duration-300 ease-in-out
+        ${
+          active
+            ? "opacity-100 visible translate-y-0"
+            : "opacity-0 invisible translate-y-5 lg:opacity-100 lg:visible lg:translate-y-0"
+        }
+        lg:flex-row flex-col
+        space-y-6 lg:space-y-0
+        shadow-lg lg:shadow-none
+      `}
+      >
+        <ul className="lg:flex lg:items-center lg:gap-3 lg:flex-row flex-col space-y-6 lg:space-y-0">
+          {NavLink.map((link, index) => {
+            return (
+              <li
+                key={index}
+                className="flex items-center text-lg leading-[120%] gap-2 capitalize px-1.5 py-1 text-[#414651] cursor-pointer"
+              >
+                <p>{link.name}</p>
+                <span className="flex items-center justify-center text-textB">
+                  {link.icon}
+                </span>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+      <div className="flex items-center gap-7">
+        <div className="flex items-center lg:w-[12.31rem] lg:h-15 w-[8.31rem] h-11 justify-center lg:gap-3 gap-1.5 cursor-pointer rounded-full bg-gradient-to-tr from-sky to-blue text-white hover:opacity-90 transition-opacity duration-200">
+          <Image src={boostIcon} alt="" className="h-5 w-auto" />
+          <p className="lg:text-xl text-[1rem]">Boost now</p>
+        </div>
+
+        <div className="lg:hidden" onClick={handleActive}>
+          {active ? (
+            <FaX className="text-xl transition-transform duration-200 hover:rotate-90" />
+          ) : (
+            <FaBars className="text-xl transition-transform duration-200 hover:rotate-180" />
+          )}
+        </div>
       </div>
     </div>
   );

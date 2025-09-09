@@ -11,11 +11,11 @@ const Pricing = () => {
   ];
   return (
     <div className="mt-21 flex flex-col justify-center items-center py-8 ">
-      <div className="text-center space-y-6 mb-10">
-        <h1 className="text-7xl font-futura uppercase tracking-[-2%] leading-[92%] font-extrabold text-blue-900  ">
+      <div className="text-center lg:space-y-6 space-y-3 lg:mb-10 mb-6">
+        <h1 className="lg:text-7xl text-3xl font-futura uppercase tracking-[-2%] leading-[92%] font-extrabold text-blue-900  ">
           Grow Your Brand Today
         </h1>
-        <p className="text-xl text-[#414651] ">
+        <p className="lg:text-xl text-sm text-[#414651] ">
           Get featured on major news sites to drive visitors and customers to
           your website, all for a one-time payment.
         </p>

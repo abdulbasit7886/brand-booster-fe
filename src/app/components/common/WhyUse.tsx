@@ -44,22 +44,22 @@ const Data = [
 
 const WhyUseCard = () => {
   return (
-    <div className="mt-11 flex flex-wrap  gap-6 justify-center ">
+    <div className="mt-11 flex flex-wrap  gap-6 justify-center px-[5%] ">
       {Data.map((item, index) => {
         return (
           <div
-            className="w-[28%] h-auto bg-[#f5f5f5] px-7 py-7 rounded-2xl space-y-7.5 "
+            className="lg:w-[28%] w-[90%]  h-auto bg-[#f5f5f5] px-7 py-7 rounded-2xl space-y-7.5 "
             key={index}
           >
-            <div className=" h-11 w-auto">
+            <div className=" lg:h-11 h-7 w-auto">
               <Image src={item.img} alt="" className="h-full w-full"
               style={{height:'50px', width:'auto'}} />
             </div>
             <div className="space-y-3">
-              <h3 className="text-4xl font-futura font-bold uppercase text-blue-900 ">
+              <h3 className="lg:text-4xl text-xl font-futura font-bold uppercase text-blue-900 ">
                 {item.heading}
               </h3>
-              <p className="text-lg text-textB ">{item.subtext}</p>
+              <p className="lg:text-lg text-sm text-textB ">{item.subtext}</p>
             </div>
           </div>
         );

@@ -1,7 +1,7 @@
 import React from "react";
 import { CImages, images } from "../../data/Images";
 import bannerimage from "../../asset/images/image 1.png";
-import brandLogo from "../../asset/images/c logos/datafloq2.png";
+import brandLogo from "../../asset/images/c logos/datafloq.png";
 import boostIcon from "../../asset/icons/booster.png";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 import Image from "next/image";
@@ -10,7 +10,7 @@ const Header = () => {
   return (
     <div className=" w-screen h-auto font-inter bg-gradient-to-b from-purple from-40% to-white-50 to-80%">
       <div className="flex flex-col md:flex-row justify-between px-12.5   ">
-        <div className=" w-full lg:w-[50%] lg:pl-8 sm:w-[50%] flex lg:pt-62.25 md:ml-3 md:justify-center">
+        <div className=" w-full lg:w-[50%] lg:pl-8 sm:w-[50%] flex lg:pt-62.25 pt-23 md:ml-3 md:justify-center">
           <div className="flex flex-col  gap-8  md:pt-0  text-center sm:text-left sm:pt-20 ">
             <div className="gap-6 flex flex-col">
               <h1 className="font-futura font-bold lg:font-bold  text-3xl lg:uppercase lg:text-8xl tracking-[-2%] lg:leading-[92%] text-blue-900 ">
@@ -41,16 +41,19 @@ const Header = () => {
                 </div>
               </div>
             </div>
-            <div className=" flex flex-col">
-              <button className="flex items-center justify-center w-[220px] h-16   gap-2  text-sm  lg:text-xl bg-gradient-to-tr from-sky to-blue text-white rounded-full text-semibold">
+            <div className=" flex flex-col lg:items-start items-center">
+              <button className="flex items-center justify-center lg:w-[220px] lg:h-16 h-12 w-[180px]   gap-2  text-sm  lg:text-xl bg-gradient-to-tr from-sky to-blue text-white rounded-full text-semibold">
                 <Image src={boostIcon} alt="icon" /> Boost Now
               </button>
             </div>
             <div className="flex flex-col  mt-4  gap-9.1 text-center sm:text-left items-center sm:items-start">
-              <h3 className="font-bold text-lg hidden md:flex md:text-xl">
+              <h3 className="font-bold text-lg hidden lg:flex md:text-xl">
                 Publish Your Story on:
               </h3>
-              <div className="flex items-center  flex-wrap lg:flex-nowrap gap-30 mt-7 justify-between sm:justify-start">
+              <h3 className="font-bold text-lg flex lg:hidden md:text-xl">
+                Publish Your Story on
+              </h3>
+              <div className="flex items-center  flex-wrap lg:flex-nowrap lg:gap-30 gap-10 mt-7 lg:justify-between justify-center">
                 {CImages.map((img, index) => {
                   return (
                     <Image

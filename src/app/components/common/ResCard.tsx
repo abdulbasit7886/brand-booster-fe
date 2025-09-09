@@ -81,7 +81,7 @@ const ResultCard = () => {
   }, []);
 
   return (
-    <div className="bg-[#C8D0FA50] lg:pt-25 px-13 pb-24 ">
+    <div className="bg-[#C8D0FA50] lg:pt-25 pt-15 px-13 pb-24 ">
       <h1 className="font-futura font-bold md:text-3xl text-2xl lg:text-7xl tracking-[-2%] uppercase text-blue-900 text-center mb-10">
         marketing that gets results
       </h1>
@@ -92,7 +92,7 @@ const ResultCard = () => {
           return (
             <div
               key={index}
-              className={`flex md:flex-row flex-col lg:w-[95%] lg:h-[33rem] md:h-[17rem] md:w-full bg-white  rounded-4xl overflow-hidden`}
+              className={`flex md:flex-row flex-col lg:w-[95%] lg:h-[33rem] md:h-[17rem] md:w-full bg-white  lg:rounded-4xl rounded-2xl overflow-hidden`}
             >
               {isEven ? (
                 <>
@@ -138,14 +138,14 @@ const ResultCard = () => {
                       alt={item.heading}
                       className="lg:w-[42rem] lg:h-[37rem] md:h-[17rem] md:w-[17rem]  object-cover"
                     />
-                    <div className="w-[80%] absolute top-[50%] mx-auto  left-[10%] items-center justify-center flex in-last:top-[60%]">
-                      <div className="absolute -bottom-3 w-[94%] h-30 left-[3%] right-0  bg-[#89C6D3] rounded-3xl z-1 last:hidden "></div>
-                      <div className="absolute -bottom-6 w-[88%] h-30 left-[6%] right-0  bg-[#4FAABE] rounded-3xl last:hidden  "></div>
+                    <div className="lg:w-[80%] w-[60%] absolute lg:top-[50%] top-[50%] mx-auto  lg:left-[10%] left-[20%] items-center justify-center flex ">
+                      <div className="absolute lg:-bottom-3 w-[94%] lg:h-30 h-full -bottom-1.5 left-[3%] right-0  bg-[#89C6D3] rounded-3xl z-1 last:hidden "></div>
+                      <div className="absolute lg:-bottom-6 w-[88%] lg:h-30 h-full -bottom-3 left-[6%] right-0  bg-[#4FAABE] rounded-3xl last:hidden  "></div>
                       <Image
                         src={item.miniImg}
                         id="miniImage"
                         alt="mini"
-                        className=" w-full h-auto rounded-3xl z-1"
+                        className=" w-full h-auto lg:rounded-3xl rounded-xl z-1"
                       />
                     </div>
                   </div>
@@ -158,14 +158,14 @@ const ResultCard = () => {
                       alt={item.heading}
                       className="lg:w-[42rem] lg:h-[37rem] md:h-[17rem] md:w-[17rem]  object-cover"
                     />
-                    <div className="w-[75%] absolute top-[45%] mx-auto  left-[12.5%] items-center justify-center flex  ">
-                      <div className="absolute -bottom-3 w-[94%] h-30 left-[3%] right-0  bg-[#89C6D3] rounded-3xl z-1 "></div>
-                      <div className="absolute -bottom-6 w-[88%] h-30 left-[6%] right-0  bg-[#4FAABE] rounded-3xl   "></div>
+                     <div className="lg:w-[70%] w-[60%] absolute lg:top-[50%] top-[50%] mx-auto  lg:left-[15%] left-[20%] items-center justify-center flex ">
+                      <div className="absolute lg:-bottom-3 lg:w-[94%] lg:h-30 h-full -bottom-1.5 lg:left-[3%] w-[96%] left-[2%]  right-0  bg-[#89C6D3] rounded-3xl z-1 last:hidden "></div>
+                      <div className="absolute lg:-bottom-6 lg:w-[88%] lg:h-30 h-full -bottom-3 lg:left-[6%]  w-[92%]  left-[4%] right-0  bg-[#4FAABE] rounded-3xl last:hidden  "></div>
                       <Image
                         src={item.miniImg}
                         id="miniImage"
                         alt="mini"
-                        className=" w-full h-auto rounded-3xl z-1"
+                        className=" w-full h-auto lg:rounded-3xl rounded-xl z-1"
                       />
                     </div>
                   </div>
@@ -176,7 +176,7 @@ const ResultCard = () => {
                         <Image
                           src={item.icon}
                           alt="icon"
-                          className="w-auto lg:h-20 md:h-8 h-6 mb-1"
+                          className="w-auto lg:h-20  h-10 mb-1"
                         />
                         <h3 className="lg:text-6xl  md:text-4xl text-xl font-semibold uppercase font-futura text-blue-900   ">
                           {item.heading}

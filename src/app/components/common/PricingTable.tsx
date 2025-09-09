@@ -191,173 +191,174 @@ export const PricingTable: React.FC = () => {
   const [active, setActive] = useState<"en" | "nl">("en");
 
   return (
-    <div className="overflow-x-auto p-6 mt-10 ">
-      <div className="min-w-screen px-13.5">
-        <table className="table-auto w-full text-sm text-center border-collapse">
-          <thead>
-            <tr className="border-b border-gray-300">
-              <th className=" w-[262.4px]">
-                <div className=""></div>
-              </th>
-              {plans.map((plan, idx) => (
-                <th
-                  key={idx}
-                  className="text-xl uppercase font-futura font-extrabold text-left px-6 py-4  w-[262.4px]"
-                >
-                  {plan.heading}
+    <div className="w-full p-4 mt-10 overflow-hidden">
+      <div className="lg:overflow-x-visible overflow-x-auto">
+        <div className="lg:min-w-full min-w-[800px]">
+          <table className="w-full text-sm text-center border-collapse">
+            <thead>
+              <tr className="border-b border-gray-300">
+                <th className="w-[180px] lg:w-[262.4px] sticky left-0 bg-white z-10">
+                  <div className=""></div>
                 </th>
-              ))}
-            </tr>
-          </thead>
-          <thead>
-            <tr>
-              <th className="p-4 ">
-                <div className="flex items-center justify-center  mt-20  w-[14.31rem]  bg-[#E9EAEB] rounded-full  p-1.5">
-                  <button
-                    onClick={() => setActive("en")}
-                    className={`w-[29rem] h-11 rounded-full gap-2 flex items-center justify-center  p-1.5 text-sm  ${
-                      active === "en"
-                        ? " bg-white text-textD  "
-                        : " text-textB "
-                    }`}
+                {plans.map((plan, idx) => (
+                  <th
+                    key={idx}
+                    className="text-lg lg:text-xl uppercase font-extrabold text-left px-4 lg:px-6 py-3 lg:py-4 w-[180px] lg:w-[262.4px] bg-white"
                   >
-                    <Image src={engFlag} alt="" className="h-6 w-6" />
-                    English
-                  </button>
-                  <button
-                    onClick={() => setActive("nl")}
-                    className={`w-[27rem] h-11 rounded-full gap-2 flex items-center justify-center  p-1.5 text-sm ${
-                      active === "nl" ? " bg-white text-textD" : " text-textB "
-                    }`}
-                  >
-                    <Image src={dutchFlag} alt="" />
-                    Dutch
-                  </button>
-                </div>
-              </th>
-              {plans.map((plan, idx) => (
-                <th
-                  key={idx}
-                  className="pt-8 text-[#181D27] space-y-6 px-6 text-left bg-white  "
-                >
-                  <div className="">
-                    <div className="text-3xl font-semibold tracking-[-2%]">
-                      {plan.price}
-                    </div>
-                    <div className="mt-1 text-xs leading-5 font-medium text-[#535862]">
-                      {plan.title}
-                    </div>
+                    {plan.heading}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <thead>
+              <tr>
+                <th className="p-2 lg:p-4 sticky left-0 bg-white z-10">
+                  <div className="flex items-center justify-center mt-4 lg:mt-20 w-full max-w-[14.31rem] bg-[#E9EAEB] rounded-full p-1.5 mx-auto">
+                    <button
+                      onClick={() => setActive("en")}
+                      className={`w-full h-8 lg:h-11 rounded-full gap-1 lg:gap-2 flex items-center justify-center p-1 text-xs lg:text-sm ${
+                        active === "en"
+                          ? "bg-white text-textD"
+                          : "text-textB"
+                      }`}
+                    >
+                      <div className="w-4 h-4 lg:w-6 lg:h-6 bg-gray-300 rounded-full flex-shrink-0">
+                        <Image src={engFlag} alt="english flag" />
+                      </div>
+                      English
+                    </button>
+                    <button
+                      onClick={() => setActive("nl")}
+                      className={`w-full h-8 lg:h-11 rounded-full gap-1 lg:gap-2 flex items-center justify-center p-1 text-xs lg:text-sm ${
+                        active === "nl"
+                          ? "bg-white text-textD"
+                          : "text-textB"
+                      }`}
+                    >
+                      <div className="w-4 h-4 lg:w-6 lg:h-6 bg-gray-300 rounded-full flex-shrink-0">
+                        <Image src={dutchFlag} alt="dutch flag"/>
+                      </div>
+                      Dutch
+                    </button>
                   </div>
-                  <button className="mt-3 w-full py-3 bg-gradient-to-tr from-sky to-blue text-white text-base font-semibold rounded-full shadow-md hover:opacity-90 transition cursor-pointer">
-                    Get started
-                  </button>
                 </th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td
-                colSpan={plans.length + 1}
-                className="pt-8 pb-3 text-left text-lg font-semibold text-[#387987] "
-              >
-                Overview
-              </td>
-            </tr>
-            {overviews.map((row, idx) => (
-              <tr key={idx} className={`odd:bg-white even:bg-gray-50 `}>
-                <td className="p-3 text-left font-medium text-sm leading-5 text-[#181D27] flex items-center gap-2">
-                  {row.label}
-                  <span className="text-xs text-gray-500 border rounded-full w-5 h-5 flex items-center justify-center">
-                    ?
-                  </span>
-                </td>
-                {plans.map((p, i) => (
-                  <td key={i} className="p-3 text-center text-textB">
-                    {row.isBool ? (
-                      p[row.key] ? (
-                        <Check />
-                      ) : (
-                        <Cross />
-                      )
-                    ) : (
-                      p[row.key]
-                    )}
-                  </td>
+                {plans.map((plan, idx) => (
+                  <th
+                    key={idx}
+                    className="pt-4 lg:pt-8 text-[#181D27] space-y-3 lg:space-y-6 px-4 lg:px-6 text-left bg-white"
+                  >
+                    <div className="">
+                      <div className="text-xl lg:text-3xl font-semibold tracking-[-2%]">
+                        {plan.price}
+                      </div>
+                      <div className="mt-1 text-xs leading-4 lg:leading-5 font-medium text-[#535862]">
+                        {plan.title}
+                      </div>
+                    </div>
+                    <button className="mt-2 lg:mt-3 w-full py-2 lg:py-3 bg-gradient-to-tr from-sky to-blue text-white text-sm lg:text-base font-semibold rounded-full shadow-md hover:opacity-90 transition cursor-pointer">
+                      Get started
+                    </button>
+                  </th>
                 ))}
               </tr>
-            ))}
-
-            {/* Included Outlets */}
-            <tr>
-              <td
-                colSpan={plans.length + 1}
-                className="pt-8 pb-3 text-left text-lg font-semibold text-[#387987] border-t border-gray-300"
-              >
-                Included Outlets
-              </td>
-            </tr>
-
-            {overview.map((row, idx) => (
-              <tr key={idx} className={`odd:bg-white even:bg-gray-50`}>
-                <td className="p-3 text-left font-medium flex items-center gap-3">
-                  {row.label}
-                  {row.img && (
-                    <Image
-                      src={row.img}
-                      alt={row.label}
-                      className="w-auto h-5 object-contain"
-                    />
-                  )}
-                </td>
-                {plans.map((p, i) => (
-                  <td key={i} className="py-3">
-                    {p[row.key] ? <Check /> : <Cross />}
-                  </td>
-                ))}
-              </tr>
-            ))}
-
-            <tr>
-              <td
-                colSpan={plans.length + 1}
-                className="pt-8 pb-3 text-left text-lg font-semibold text-[#387987] border-t border-gray-300"
-              >
-                Accepted Topics
-              </td>
-            </tr>
-
-            {overviewss.map((row, idx) => (
-              <tr key={idx} className={`odd:bg-white even:bg-gray-50 `}>
-                <td className="p-3 text-left font-medium text-[#181D27] flex items-center gap-2">
-                  {row.label}
-                  <span className="text-xs text-gray-500 border rounded-full w-5 h-5 flex items-center justify-center">
-                    ?
-                  </span>
-                </td>
-                {plans.map((p, i) => (
-                  <td key={i} className="py-3">
-                    {p[row.key] ? <Check /> : <Cross />}
-                  </td>
-                ))}
-              </tr>
-            ))}
-
-            <tr>
-              <th className="p-4"></th>
-              {plans.map((plan, idx) => (
+            </thead>
+            <tbody>
+              <tr>
                 <td
-                  key={idx}
-                  className="p-6 text-[#181D27] space-y-3 text-left bg-white  "
+                  colSpan={plans.length + 1}
+                  className="pt-6 lg:pt-8 pb-2 lg:pb-3 text-left text-base lg:text-lg font-semibold text-[#387987] sticky left-0 bg-white z-10"
                 >
-                  <button className="mt-3 w-full py-3 bg-gradient-to-tr from-sky to-blue text-white text-base font-semibold rounded-full shadow-md hover:opacity-90 transition cursor-pointer">
-                    Get started
-                  </button>
+                  Overview
                 </td>
+              </tr>
+              {overviews.map((row, idx) => (
+                <tr key={idx} className={`odd:bg-white even:bg-gray-50`}>
+                  <td className="p-2 lg:p-3 text-left font-medium text-xs lg:text-sm leading-5 text-[#181D27] flex items-center gap-1 lg:gap-2 sticky left-0 bg-white z-10">
+                    {row.label}
+                    <span className="text-xs text-gray-500 border rounded-full w-4 h-4 lg:w-5 lg:h-5 flex items-center justify-center flex-shrink-0">
+                      ?
+                    </span>
+                  </td>
+                  {plans.map((p, i) => (
+                    <td key={i} className="p-2 lg:p-3 text-center text-textB">
+                      {row.isBool ? (
+                        p[row.key] ? (
+                          <Check />
+                        ) : (
+                          <Cross />
+                        )
+                      ) : (
+                        p[row.key]
+                      )}
+                    </td>
+                  ))}
+                </tr>
               ))}
-            </tr>
-          </tbody>
-        </table>
+
+              {/* Included Outlets */}
+              <tr>
+                <td
+                  colSpan={plans.length + 1}
+                  className="pt-6 lg:pt-8 pb-2 lg:pb-3 text-left text-base lg:text-lg font-semibold text-[#387987] border-t border-gray-300 sticky left-0 bg-white z-10"
+                >
+                  Included Outlets
+                </td>
+              </tr>
+
+              {overview.map((row, idx) => (
+                <tr key={idx} className={`odd:bg-white even:bg-gray-50`}>
+                  <td className="p-2 lg:p-3 text-left font-medium text-xs lg:text-sm flex items-center gap-2 sticky left-0 bg-white z-10">
+                    {row.label}
+                  </td>
+                  {plans.map((p, i) => (
+                    <td key={i} className="py-2 lg:py-3">
+                      {p[row.key] ? <Check /> : <Cross />}
+                    </td>
+                  ))}
+                </tr>
+              ))}
+
+              <tr>
+                <td
+                  colSpan={plans.length + 1}
+                  className="pt-6 lg:pt-8 pb-2 lg:pb-3 text-left text-base lg:text-lg font-semibold text-[#387987] border-t border-gray-300 sticky left-0 bg-white z-10"
+                >
+                  Accepted Topics
+                </td>
+              </tr>
+
+              {overviewss.map((row, idx) => (
+                <tr key={idx} className={`odd:bg-white even:bg-gray-50`}>
+                  <td className="p-2 lg:p-3 text-left font-medium text-xs lg:text-sm text-[#181D27] flex items-center gap-1 lg:gap-2 sticky left-0 bg-white z-10">
+                    {row.label}
+                    <span className="text-xs text-gray-500 border rounded-full w-4 h-4 lg:w-5 lg:h-5 flex items-center justify-center flex-shrink-0">
+                      ?
+                    </span>
+                  </td>
+                  {plans.map((p, i) => (
+                    <td key={i} className="py-2 lg:py-3">
+                      {p[row.key] ? <Check /> : <Cross />}
+                    </td>
+                  ))}
+                </tr>
+              ))}
+
+              <tr>
+                <th className="p-2 lg:p-4 sticky left-0 bg-white z-10"></th>
+                {plans.map((plan, idx) => (
+                  <td
+                    key={idx}
+                    className="p-4 lg:p-6 text-[#181D27] space-y-2 lg:space-y-3 text-left bg-white"
+                  >
+                    <button className="w-full py-2 lg:py-3 bg-gradient-to-tr from-sky to-blue text-white text-sm lg:text-base font-semibold rounded-full shadow-md hover:opacity-90 transition cursor-pointer">
+                      Get started
+                    </button>
+                  </td>
+                ))}
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   );

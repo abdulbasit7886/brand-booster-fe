@@ -7,23 +7,23 @@ import Image from "next/image";
 
 const MoneyBack = () => {
   return (
-    <div className="w-[95%] relative h-130 flex flex-col items-center mx-auto  my-40 pt-26 px-15 bg-purple-50 rounded-2xl">
+    <div className="lg:w-[95%] w-screen relative h-130 flex flex-col items-center mx-auto  my-40 pt-26 lg:px-15 px-7 bg-purple-50 rounded-2xl">
       <div className="text-center  flex items-center justify-center flex-col">
         <div className="space-y-6 ">
-          <h1 className="font-futura text-7xl tracking-[1px] font-extrabold uppercase text-blue-900">
+          <h1 className="font-futura lg:text-7xl text-3xl tracking-[1px] font-extrabold uppercase text-blue-900">
             money back gurantee
           </h1>
-          <p className="text-xl text-[#414651] leading-[170%] ">
+          <p className="lg:text-xl text-sm text-[#414651] leading-[170%] ">
             In the event that we cannot publish your news story on the news
             outlets included in your <br /> chosen publishing package, you will
             be entitled to a full refund.
           </p>
         </div>
-        <button className="bg-gradient-to-tr from-sky to-blue w-[230px]  h-14 flex items-center justify-center  text-white font-normal relative  text-lg rounded-full mt-11 cursor-pointer border-1 border-sky">
+        <button className="bg-gradient-to-tr from-sky to-blue  lg:w-[230px]  lg:h-14  w-[200px] h-11 flex items-center justify-center  text-white font-normal relative  text-lg rounded-full mt-11 cursor-pointer border-1 border-sky">
           Get started
         </button>
       </div>
-      <div className="absolute flex items-center justify-between w-full  ">
+      <div className="absolute  items-center justify-between w-full lg:flex hidden  ">
         <Image
           src={cicon1}
           alt="cicon"

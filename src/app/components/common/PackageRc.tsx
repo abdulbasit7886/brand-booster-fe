@@ -25,11 +25,11 @@ const PackageRc = () => {
   ];
 
   return (
-    <div className='flex  items-center justify-center space-x-50 mt-11 w-[60.5rem] mx-auto'>
+    <div className='flex  items-center justify-center lg:space-x-50 mt-11 lg:w-[60.5rem] w-[90%] mx-auto gap-10'>
       {statsData.map((stat) => (
-        <div key={stat.id} className="flex flex-col items-center justify-center gap-5">
-          <h3 className='text-futura font-extrabold  text-6xl text-blue-900 leading-[92%] tracking-[-10%]'>{stat.value}</h3>
-          <p className='text-sm uppercase text-textB tracking-wide text-center'>{stat.label}</p>
+        <div key={stat.id} className="flex flex-col items-center justify-center lg:gap-5 gap-3">
+          <h3 className='text-futura font-extrabold  lg:text-6xl text-2xl text-blue-900 leading-[92%] tracking-[-10%]'>{stat.value}</h3>
+          <p className='lg:text-sm text-[10px] uppercase text-textB tracking-wide text-center'>{stat.label}</p>
         </div>
       ))}
     </div>
