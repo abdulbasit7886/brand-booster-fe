@@ -13,7 +13,7 @@ const Navigation = () => {
   };
 
   return (
-    <div className="lg:w-[91.1%] w-screen h-15 lg:h-20 z-100 font-Inter fixed px-5 lg:top-5 lg:left-[4.45%] left-[2.5%] top-4 flex items-center justify-between lg:px-3 lg:pr-4 lg:pl-6 pr-6 pl-4 bg-white rounded-[50px]">
+    <div className="lg:w-[91.1%] w-[95%] h-15 lg:h-20 z-100 font-Inter fixed px-5 lg:top-5 lg:left-[4.45%] left-[2.5%] top-4 flex items-center justify-between lg:px-3 lg:pr-4 lg:pl-6 pr-6 pl-4 bg-white rounded-[50px]">
       <div>
         <Image
           src={logo}
