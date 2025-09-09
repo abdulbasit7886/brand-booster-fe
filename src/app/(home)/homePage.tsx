@@ -13,7 +13,7 @@ import Footer from "../components/page component/Footer";
 
 const HomePage = () => {
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <Header />
       <HowWorks />
       <ResultCard />
