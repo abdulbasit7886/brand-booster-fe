@@ -19,7 +19,7 @@ const Questionboard = () => {
 
   return (
     <div className="lg:w-[75%] w-[95%] h-auto mx-auto bg-white mt-11 flex flex-col items-center lg:rounded-4xl rounded-2xl pb-10">
-      <ul className="flex w-full gap-4 lg:h-20 h-15 items-end justify-center mx-auto border-b border-[#ccc] mb-5">
+      <ul className="flex w-full lg:gap-4 lg:h-20 h-15 items-end justify-center lg:mx-auto border-b border-[#ccc] mb-5">
         {items.map((item: string) => {
           return (
             <li
