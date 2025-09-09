@@ -1,0 +1,23 @@
+// import grow from "../asset/icons/grow.png"
+// import medal from "../asset/icons/medal.png"
+// import heart from "../asset/icons/heart.png"
+// import verified from "../asset/icons/verified.png"
+// import rank from "../asset/icons/rank.png"
+
+// import bgimg1 from "../asset/images/result images/rc (1).jpg"
+// import bgimg2 from "../asset/images/result images/rc (3).png"
+// import bgimg3 from "../asset/images/result images/rc (1).jpg"
+// import bgimg4 from "../asset/images/result images/rc (2).jpg"
+// import bgimg5 from "../asset/images/result images/rc (2).png"
+
+// import resultimg1 from "../asset/images/result images/res (3).png"
+// import resultimg2 from "../asset/images/result images/res (5).png"
+// import resultimg3 from "../asset/images/result images/res (2).png"
+// import resultimg4 from "../asset/images/result images/res (1).png"
+// import resultimg5 from "../asset/images/result images/res (4).png"
+
+// import avater1 from "../asset/images/avater/a (1).jpg"
+// import avater2 from "../asset/images/avater/a (1).png"
+// import avater3 from "../asset/images/avater/a (2).png"
+// import avater4 from "../asset/images/avater/a (3).png"
+// import avater5 from "../asset/images/avater/a (4).png"

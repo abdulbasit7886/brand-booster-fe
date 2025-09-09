@@ -1,0 +1,44 @@
+@import "tailwindcss";
+@font-face {
+  font-family: 'Inter';
+  src: url('./asset/fonts/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+  font-weight: 100 900; /* Covers all weights */
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Futura Condensed Font */
+@font-face {
+  font-family: 'Futura Condensed';
+  src: url('./asset/fonts/Futura Condensed Extra Bold.ttf') format('truetype');
+  font-style: normal;
+  font-display: swap;
+}
+@theme {
+  --font-Inter: "Inter", sans-serif;
+  --font-futura: "futura condensed", sans-serif;
+  
+  --color-white: #fff;
+  --color-textB: #717680;
+  --color-textD: #4b4f60;
+  --color-body: #efefef;
+  --color-blue: #13237a;
+  --color-sky: #4faabe;
+  --color-blue-900: #080f33;
+  --color-purple: #c8d0fa;
+  --color-white-50: #ffffff50;
+  --color-black-20: #00000050;
+  --color-lightSky: #edf7f9;
+  --color-darksky: #c8e5eb;
+  --color-green: #17b26a;
+  
+  --radius-full: 50px;
+}
+
+
+body {
+  font-family: var(--font-Inter);
+  background-color: var(--color-white);
+  color: var(--color-textD);
+  margin: 0;
+}
