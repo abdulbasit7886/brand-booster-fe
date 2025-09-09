@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const ReadyGrow = () => {
   return (
-    <div className="lg:w-[107rem] lg:h-[17rem] h-auto w-[96%] mt-7.5  py-12 lg:px-16 px-8 mx-auto bg-gradient-to-tr from-blue to-sky lg:rounded-4xl rounded-2xl flex items-center justify-between flex-col lg:flex-row ">
+    <div className="lg:w-[108rem] lg:h-[17rem] h-auto w-[96%] mt-7.5  py-12 lg:px-16 px-8 mx-auto bg-gradient-to-tr from-blue to-sky lg:rounded-4xl rounded-2xl flex items-center justify-between flex-col lg:flex-row ">
       <div className="space-y-7">
         <h1 className="lg:text-5xl  text-2xl font-bold lg:leading-[120%] font-futura uppercase lg:text-left text-center tracking-wide text-white ">
           Ready to Grow Your Brand?
