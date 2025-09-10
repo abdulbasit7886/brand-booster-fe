@@ -1,4 +1,4 @@
-import React  from "react";
+import React from "react";
 import { CImages, images } from "../../data/Images";
 import bannerimage from "../../asset/images/image 1.png";
 import brandLogo from "../../asset/images/c logos/datafloqa.png";
@@ -19,7 +19,7 @@ const Header = () => {
               <p className="lg:font-medium font-normal text-sm lg:text-2xl text-textB leading-[150%] w-[90%]">
                 Share your story on{" "}
                 <b className="text-[#181D27] ">200+ influential news sites </b>{" "}
-                your competitor can't reach — and watch your visibility,
+                your competitor can&apos;t reach — and watch your visibility,
                 credibility, and audience grow.
               </p>
               <div>
