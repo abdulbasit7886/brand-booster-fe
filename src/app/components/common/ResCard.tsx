@@ -81,8 +81,8 @@ const ResultCard = () => {
   }, []);
 
   return (
-    <div className="bg-[#C8D0FA50] lg:pt-25 pt-15 px-13 pb-24 ">
-      <h1 className="font-futura font-bold md:text-3xl text-2xl lg:text-7xl tracking-[-2%] uppercase text-blue-900 text-center mb-10">
+    <div className="bg-[#C8D0FA50] lg:pt-20 pt-15 px-5 lg:pb-24 pb-4 ">
+      <h1 className="font-futura font-bold text-[2rem] lg:text-7xl tracking-[-2%] uppercase text-blue-900 text-center mb-10">
         marketing that gets results
       </h1>
       <div className=" space-y-7.5  flex flex-col items-center">
@@ -92,40 +92,40 @@ const ResultCard = () => {
           return (
             <div
               key={index}
-              className={`flex md:flex-row flex-col lg:w-[95%] lg:h-[33rem] md:h-[17rem] md:w-full bg-white  lg:rounded-4xl rounded-2xl overflow-hidden`}
+              className={`flex md:flex-row flex-col lg:w-[95%] lg:h-[33rem] w-full bg-white  lg:rounded-4xl rounded-2xl overflow-hidden`}
             >
               {isEven ? (
                 <>
-                  <div className="lg:pr-41 lg:pl-13.5 lg:py-20 px-7 py-7 flex-1   order-2 md:order-2">
-                    <div className=" lg:space-y-10 md:space-y-2 lg:mb-3 md:mb-1">
-                      <div className="flex flex-col gap-7 items-start">
+                  <div className="lg:pr-41 lg:pl-13.5 lg:py-20 px-3 py-6 flex-1 order-2 md:order-2">
+                    <div className=" lg:space-y-10  space-y-2 lg:mb-3 md:mb-1">
+                      <div className="flex flex-col lg:gap-7  gap-4 items-start">
                         <Image
                           src={item.icon}
                           alt="icon"
-                          className="w-auto lg:h-20 md:h-8 h-6 mb-1"
+                          className="w-auto lg:h-20  h-9 mb-1"
                         />
-                        <h3 className="lg:text-6xl  md:text-4xl text-xl font-semibold uppercase font-futura text-blue-900   ">
+                        <h3 className="lg:text-6xl  text-2xl font-semibold uppercase font-futura text-blue-900   ">
                           {item.heading}
                         </h3>
                       </div>
-                      <p className="text-textB lg:text-xl md:text:lg text-sm mb-4 w-[90%] leading-[150%] ">
+                      <p className="text-textB lg:text-xl  text-sm mb-4 lg:w-[90%] w-[100%] leading-[150%] ">
                         {item.text}
                       </p>
                     </div>
 
                     <div className="flex items-center gap-3">
-                      <div className="flex items-center lg:gap-3 md:gap-2 gap-1">
+                      <div className="flex items-center lg:gap-3 gap-4">
                         <div className="flex lg:-space-x-3 md:-space-x-2 -space-x-1">
                           {item.avater.map((avt, i) => (
                             <Image
                               key={i}
                               src={avt}
                               alt="avatar"
-                              className="lg:w-12 lg:h-12 md:h-6 md:w-6 h-4 w-4 rounded-full border-2 border-white"
+                              className="lg:w-12 lg:h-12 h-6 w-6 rounded-full border-2 border-white shadow"
                             />
                           ))}
                         </div>
-                        <p className="lg:text-lg text-sm  font-semibold  lg:font-bold  capitalize ">
+                        <p className="lg:text-lg text-[1rem]  font-semibold  lg:font-bold  capitalize ">
                           view real stories
                         </p>
                       </div>
@@ -136,11 +136,11 @@ const ResultCard = () => {
                     <Image
                       src={item.back}
                       alt={item.heading}
-                      className="lg:w-[42rem] lg:h-[37rem] md:h-[17rem] md:w-[17rem]  object-cover"
+                      className="lg:w-[42rem] lg:h-[37rem] h-[22.56rem] w-full  object-cover"
                     />
-                    <div className="lg:w-[80%] w-[60%] absolute lg:top-[50%] top-[50%] mx-auto  lg:left-[10%] left-[20%] items-center justify-center flex ">
-                      <div className="absolute lg:-bottom-3 w-[94%] lg:h-30 h-full -bottom-1.5 left-[3%] right-0  bg-[#89C6D3] rounded-3xl z-1 last:hidden "></div>
-                      <div className="absolute lg:-bottom-6 w-[88%] lg:h-30 h-full -bottom-3 left-[6%] right-0  bg-[#4FAABE] rounded-3xl last:hidden  "></div>
+                    <div className="lg:w-[80%] w-[60%] absolute  bottom-12 mx-auto  lg:left-[10%] left-[20%] items-center justify-center flex ">
+                      <div className="absolute lg:-bottom-3 w-[96%] lg:h-30 h-full -bottom-[7px] left-[2%] right-0  bg-[#89C6D3] rounded-3xl z-1 last:hidden "></div>
+                      <div className="absolute lg:-bottom-6 w-[90%] lg:h-30 h-full -bottom-3 left-[5%] right-0  bg-[#4FAABE] rounded-3xl last:hidden  "></div>
                       <Image
                         src={item.miniImg}
                         id="miniImage"
@@ -156,11 +156,11 @@ const ResultCard = () => {
                     <Image
                       src={item.back}
                       alt={item.heading}
-                      className="lg:w-[42rem] lg:h-[37rem] md:h-[17rem] md:w-[17rem]  object-cover"
+                      className="lg:w-[42rem] lg:h-[37rem] h-[22.56rem] w-full  object-cover"
                     />
-                     <div className="lg:w-[70%] w-[60%] absolute lg:top-[50%] top-[50%] mx-auto  lg:left-[15%] left-[20%] items-center justify-center flex ">
-                      <div className="absolute lg:-bottom-3 lg:w-[94%] lg:h-30 h-full -bottom-1.5 lg:left-[3%] w-[96%] left-[2%]  right-0  bg-[#89C6D3] rounded-3xl z-1 last:hidden "></div>
-                      <div className="absolute lg:-bottom-6 lg:w-[88%] lg:h-30 h-full -bottom-3 lg:left-[6%]  w-[92%]  left-[4%] right-0  bg-[#4FAABE] rounded-3xl last:hidden  "></div>
+                    <div className="lg:w-[80%] w-[60%] absolute  bottom-12 mx-auto  lg:left-[10%] left-[20%] items-center justify-center flex ">
+                      <div className="absolute lg:-bottom-3 w-[96%] lg:h-30 h-full -bottom-[7px] left-[2%] right-0  bg-[#89C6D3] rounded-3xl z-1 last:hidden "></div>
+                      <div className="absolute lg:-bottom-6 w-[90%] lg:h-30 h-full -bottom-3 left-[5%] right-0  bg-[#4FAABE] rounded-3xl last:hidden  "></div>
                       <Image
                         src={item.miniImg}
                         id="miniImage"
@@ -171,34 +171,34 @@ const ResultCard = () => {
                   </div>
 
                   <div className="lg:px-20 lg:py-20 px-7 py-7 flex-1 order-2 md:order-1">
-                    <div className=" lg:space-y-10 md:space-y-2 lg:mb-3 md:mb-1">
-                      <div className="flex flex-col gap-7 items-start">
+                    <div className=" lg:space-y-10  space-y-2 lg:mb-3 md:mb-1">
+                      <div className="flex flex-col lg:gap-7  gap-4 items-start">
                         <Image
                           src={item.icon}
                           alt="icon"
-                          className="w-auto lg:h-20  h-10 mb-1"
+                          className="w-auto lg:h-20  h-9 mb-1"
                         />
-                        <h3 className="lg:text-6xl  md:text-4xl text-xl font-semibold uppercase font-futura text-blue-900   ">
+                        <h3 className="lg:text-6xl  text-2xl font-semibold uppercase font-futura text-blue-900   ">
                           {item.heading}
                         </h3>
                       </div>
-                      <p className="text-textB lg:text-xl md:text:lg text-sm mb-4 w-[90%] leading-[150%] ">
+                      <p className="text-textB lg:text-xl  text-sm mb-4 lg:w-[90%] w-[100%] leading-[150%] ">
                         {item.text}
                       </p>
                     </div>
                     <div className="flex items-center gap-3">
-                      <div className="flex items-center lg:gap-3 md:gap-2 gap-1">
+                      <div className="flex items-center lg:gap-3 gap-4">
                         <div className="flex lg:-space-x-3 md:-space-x-2 -space-x-1">
                           {item.avater.map((avt, i) => (
                             <Image
                               key={i}
                               src={avt}
                               alt="avatar"
-                              className="lg:w-12 lg:h-12 md:h-6 md:w-6 h-4 w-4 rounded-full border-2 border-white"
+                              className="lg:w-12 lg:h-12 h-6 w-6 rounded-full border-2 border-white shadow"
                             />
                           ))}
                         </div>
-                        <p className="lg:text-lg text-sm  font-semibold  lg:font-bold  capitalize ">
+                        <p className="lg:text-lg text-[1rem]  font-semibold  lg:font-bold  capitalize ">
                           view real stories
                         </p>
                       </div>

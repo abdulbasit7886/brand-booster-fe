@@ -17,7 +17,7 @@ const NavbarP: React.FC<NavbarPProps> = ({ links }) => {
       {links.map((link, index) => (
         <Link
           key={index}
-          href={""}
+          href={"/"}
           onClick={() => setActiveIndex(index)}
           className={`md:text-xl text-sm capitalize flex items-center justify-center leading-5 w-[4.5rem] h-[2rem]  lg:w-[8.25rem] lg:h-[3.25rem] rounded-full font-semibold transition-colors duration-300 ${
             activeIndex === index

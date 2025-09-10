@@ -13,7 +13,7 @@ const Navigation = () => {
   };
 
   return (
-    <div className="lg:w-[91.1%] w-[90%] h-15 lg:h-20 z-100 font-Inter fixed px-5 lg:top-5 lg:left-[4.45%] left-[5%] top-4 flex items-center justify-between lg:px-3 lg:pr-4 lg:pl-6 pr-6 pl-4 bg-white rounded-[50px]">
+    <div className="lg:w-[91.1%] w-screen h-15 lg:h-20 z-100 font-Inter fixed px-5 lg:top-5 lg:left-[4.45%]   flex items-center justify-between lg:px-3 lg:pr-4 lg:pl-6 pr-6 pl-4 bg-white lg:rounded-[50px]">
       <div>
         <Image
           src={logo}
@@ -25,20 +25,19 @@ const Navigation = () => {
       <div
         className={`
         lg:flex lg:items-center lg:gap-3 
-        absolute top-full left-0 right-0 mt-2 lg:mt-0
-        lg:rounded-none rounded-2xl 
+        absolute top-full  right-0  lg:mt-0
+        lg:rounded-none 
         lg:relative lg:top-auto lg:px-auto lg:py-auto 
         py-7 px-5 lg:bg-transparent bg-white 
-        lg:w-auto w-full
+        lg:w-auto w-[50%] lg:h-auto h-screen
         transition-all duration-300 ease-in-out
         ${
           active
             ? "opacity-100 visible translate-y-0"
-            : "opacity-0 invisible translate-y-5 lg:opacity-100 lg:visible lg:translate-y-0"
+            : "opacity-0 invisible translate-x-5 lg:opacity-100 lg:visible lg:translate-x-0"
         }
         lg:flex-row flex-col
-        space-y-6 lg:space-y-0
-        shadow-lg lg:shadow-none
+        space-y-6 lg:space-y-0  lg:shadow-none
       `}
       >
         <ul className="lg:flex lg:items-center lg:gap-3 lg:flex-row flex-col space-y-6 lg:space-y-0">

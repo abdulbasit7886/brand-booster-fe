@@ -66,11 +66,11 @@ const Footer: React.FC = () => {
           </p>
         </div>
 
-        <div className="flex flex-col lg:flex-row gap-50  w-full lg:w-auto">
-          <div className="flex flex-col justify-between w-[100%] lg:flex-row gap-50">
+        <div className="flex flex-col lg:flex-row gap-40  w-full lg:w-auto">
+          <div className="flex flex-col justify-between w-[100%] lg:flex-row gap-40">
             {footerLinks.map((section, index) => (
-              <div key={index} className="w-[29rem] md:w-auto">
-                <h3 className="mb-4 text-xl font-medium leading-5 uppercase tracking-wide text-white">
+              <div key={index} className="w-[35rem] md:w-auto">
+                <h3 className="mb-4 text-2xl font-medium leading-5 uppercase tracking-wide text-white">
                   {section.heading}
                 </h3>
                 <ul className="space-y-5 mt-8">
@@ -78,7 +78,7 @@ const Footer: React.FC = () => {
                     <li key={i}>
                       <Link
                         href={""}
-                        className="text-lg font-medium   text-gray-400  capitalize"
+                        className="text-xl font-medium   text-gray-400  capitalize"
                       >
                         {link.name}
                       </Link>
@@ -90,11 +90,11 @@ const Footer: React.FC = () => {
           </div>
 
           <div className="w-full md:w-auto">
-            <h3 className="mb-4 text-xl font-medium uppercase tracking-wide text-white">
+            <h3 className="mb-4 text-2xl font-medium uppercase tracking-wide text-white">
               Contact Us
             </h3>
             <ul className="space-y-4">
-              <li className="text-lg text-[#94979C] font-medium hover:text-[#AED8E1] transition capitalize">
+              <li className="text-xl text-[#94979C] font-medium hover:text-[#AED8E1] transition capitalize">
                 contact us
               </li>
               <li className="flex items-center gap-3 text-[#94979C] hover:text-white transition">

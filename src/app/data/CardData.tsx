@@ -9,22 +9,22 @@ export const CardData = [
     {
         img:upload,
         heading:"upload story",
-        subtext:"upload a story about your brand , or let us write it."
+        subtext:"Upload a story about your brand, or let us write it."
     },
     {
         img:send,
         heading:"we publish",
-        subtext:"we'll publish it on leading news sites in 7 days."
+        subtext:"We'll publish it on leading news sites in 7 days."
     },
     {
         img:analytics,
         heading:"get results",
-        subtext:"you'll get a detailed report with stats & live links."
+        subtext:"You'll get a detailed report with stats & live links."
     },
     {
         img:star,
         heading:"enjoy",
-        subtext:"enjoy lasting exposure and brand creadibility."
+        subtext:"Enjoy lasting exposure and brand credibility."
     },
 ]
 
