@@ -1,6 +1,6 @@
 import React from "react";
 import WorkCard from "../common/WorkCard";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
+import { FaArrowRight } from "react-icons/fa6";
 
 const HowWorks = () => {
   return (
@@ -10,13 +10,15 @@ const HowWorks = () => {
           how does it works ?
         </h1>
         <p className="text-textB lg:font-normal  lg:mt-4 lg:text-xl text-sm mt-2 px-2.5 lg:px-0 leading-[150%] tracking-0">
-        We get you featured in the news to boost your visibility, build brand trust, attract new customers, and drive real business impact.
+          We get you featured in the news to boost your visibility, build brand
+          trust, attract new customers, and drive real business impact.
         </p>
       </div>
-      <WorkCard/>
-        <button className="flex items-center lg:mt-0 mt-10 w-[92%] lg:w-auto justify-center py-2 lg:px-12 font-normal lg:py-5 gap-3 rounded-full mx-auto bg-gradient-to-tr from-sky to-blue text-white capitalize ">
-            <span className="trecking-widest">see our packages</span> <FaArrowRight/>
-        </button>
+      <WorkCard />
+      <button className="flex items-center lg:mt-0 mt-10 w-[92%] lg:w-auto justify-center py-2 lg:px-12 font-normal lg:py-5 gap-3 rounded-full mx-auto bg-gradient-to-tr from-sky to-blue text-white capitalize ">
+        <span className="trecking-widest">see our packages</span>{" "}
+        <FaArrowRight />
+      </button>
     </div>
   );
 };
