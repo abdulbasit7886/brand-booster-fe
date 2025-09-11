@@ -44,14 +44,14 @@ const Data = [
 
 const WhyUseCard = () => {
   return (
-    <div className="mt-11 flex flex-wrap  gap-6 justify-center px-[5%] ">
+    <div className="lg:mt-11  flex flex-wrap  gap-6 justify-center px-[2%] ">
       {Data.map((item, index) => {
         return (
           <div
-            className="lg:w-[28%] w-[90%]  h-auto bg-[#f5f5f5] px-7 py-7 rounded-2xl space-y-7.5 "
+            className="lg:w-[28%] w-[96%]  h-auto bg-[#f5f5f5] lg:px-7 lg:py-7 p-3  rounded-2xl lg:space-y-7.5 space-y-6 "
             key={index}
           >
-            <div className=" lg:h-11 h-7 w-auto">
+            <div className=" lg:h-11 h-9 w-auto">
               <Image src={item.img} alt="" className="h-full w-full"
               style={{height:'50px', width:'auto'}} />
             </div>

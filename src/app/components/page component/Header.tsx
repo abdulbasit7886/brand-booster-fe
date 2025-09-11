@@ -34,7 +34,7 @@ const Header = () => {
                       />
                     ))}
                   </div>
-                  <p className="capitalize text-[13px] lg:text-xl text-textB ">
+                  <p className="capitalize text-xs lg:text-xl text-textB ">
                     trusted by{" "}
                     <span className="text-[#181D27] font-semibold">2000+</span>
                     {""}
@@ -101,7 +101,7 @@ const Header = () => {
           </div>
         </div>
 
-        <div className="w-auto md:flex hidden justify-center  pr-10.25 pt-35 ">
+        <div className="w-auto lg:flex hidden justify-center  pr-10.25 pt-35 ">
           <div className="lg:w-[40.79rem] lg:h-[49.53rem] md:w-[17rem] md:h-[23rem] border-[0.20rem] border-white rounded-4xl relative overflow-hidden object-bottom object-cover">
             <Image
               src={bannerimage}

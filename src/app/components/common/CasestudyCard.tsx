@@ -16,12 +16,12 @@ const CasestudyCard = () => {
     setData(CsData);
   }, []);
   return (
-    <div className="flex flex-wrap lg:flex-nowrap items-center justify-center  gap-5 mt-20 w-[95%] mx-auto">
+    <div className="flex flex-wrap lg:flex-nowrap items-center justify-center  gap-5 lg:mt-20 mt-4 w-[95%] mx-auto">
       {data.map((items, index) => {
         return (
           <div
             key={index}
-            className="md:w-[22%] md:h-auto  bg-lightSky relative overflow-hidden rounded-xl  "
+            className="lg:w-[22%] w-[94%] lg:h-auto   bg-lightSky relative overflow-hidden rounded-xl  "
           >
             <div className="relative w-[100%] h-[20.87rem]  ">
               <Image
@@ -29,7 +29,7 @@ const CasestudyCard = () => {
                 alt="Office workspace"
                 className=" object-top object-cover h-full w-full"
               />
-              <div className="absolute top-0 left-0 h-full w-full bg-black-20 flex items-end p-4">
+              <div className="absolute top-0 left-0 h-full w-full lg:bg-black-20  bg-gradient-to-t from-[#000000d3] from-30% to-[#00000060] to-70% flex items-end p-4">
                 <Image
                   src={items.logo}
                   alt="Google logo"
@@ -37,18 +37,18 @@ const CasestudyCard = () => {
                 />
               </div>
             </div>
-            <div className="py-4 px-3 flex flex-col h-[15rem] justify-between">
+            <div className="lg:py-4 lg:px-3 py-3 px-2 flex flex-col lg:h-[15rem] h-[12rem] justify-between">
               <div className="space-y-3">
-                <h3 className="text-blue-900 md:text-2xl text-lg font-bold tracking-[-4%] leading-[120%] uppercase font-futura">
+                <h3 className="text-blue-900 lg:text-2xl text-[1rem] font-bold tracking-[-4%] leading-[120%] uppercase font-futura">
                   {items.name}
                 </h3>
-                <p className="text-textB text-[16px] leading-[120%] ">
+                <p className="text-textB lg:text-[1rem] text-sm leading-[120%] ">
                   {items.subtext.slice(0, 90)}...
                 </p>
               </div>
               <div className="flex flex-col gap-2.5 justify-end  items-baseline  mb-1">
-                <div className="relative bg-darksky  py-3 rounded-lg border-l-4 pr-4 pl-5 border-green  ">
-                  <p className="text-sm text-textB">
+                <div className="relative bg-darksky  py-3 rounded-lg border-l-4 pr-4 pl-5 border-green w-full  ">
+                  <p className="text-xs text-textB ">
                     🔥 Fast Google Visibility &
                     <span className="font-bold text-textD">
                       15% Longer Visits

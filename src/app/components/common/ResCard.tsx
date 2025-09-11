@@ -85,7 +85,7 @@ const ResultCard = () => {
       <h1 className="font-futura font-bold text-[2rem] lg:text-7xl tracking-[-2%] uppercase text-blue-900 text-center mb-10">
         marketing that gets results
       </h1>
-      <div className=" space-y-7.5  flex flex-col items-center">
+      <div className=" lg:space-y-7.5  space-y-4 flex flex-col items-center">
         {resultCard.map((item, index) => {
           const isEven = index % 2 === 0;
 

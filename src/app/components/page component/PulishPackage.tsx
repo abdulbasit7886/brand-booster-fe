@@ -2,6 +2,7 @@ import React from "react";
 import PackageRc from "../common/PackageRc";
 import RestrictedTop from "../common/RestrictedTop";
 import NavbarP from "../ui/NavbarP";
+import Dropdown from "../ui/Dropdown";
 
 const PulishPackage = () => {
   const links = [
@@ -11,7 +12,7 @@ const PulishPackage = () => {
     { name: "ultimate", to: "/ultimate" },
   ];
   return (
-    <div className="mt-21  bg-[#C8D0FA50] py-20 flex flex-col justify-center">
+    <div className="lg:mt-21 mt-10  bg-[#C8D0FA50] lg:py-20 py-10 flex flex-col justify-center">
       <div className=" space-y-4 pb-11">
         <h1 className="lg:text-7xl tracking-[-2%] text-3xl  font-extrabold text-blue-900 font-futura text-center uppercase ">
           publishing Packages
@@ -22,7 +23,10 @@ const PulishPackage = () => {
           ranks high on Google, delivering you quality readers and clicks.
         </p>
       </div>
-      <NavbarP links={links}/>
+      <div className="lg:flex hidden">
+      <NavbarP links={links} />
+      </div>
+      <Dropdown links={links} />
       <PackageRc/>
       <RestrictedTop/>
     </div>

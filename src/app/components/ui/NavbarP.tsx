@@ -2,7 +2,6 @@ import Link from "next/link";
 import React, { useState } from "react";
 type NavLink = {
   name: string;
-  href?: string;
   to?: string;
 };
 
@@ -13,7 +12,7 @@ const NavbarP: React.FC<NavbarPProps> = ({ links }) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <div className="bg-[#E7E9F2] lg:h-17 h-11 lg: lg:w-[36.5rem] w-[20rem] p-2  rounded-full flex items-center border border-[#E9EAEB] justify-around mx-auto gap-1">
+    <div className="bg-[#E7E9F2] lg:h-17 h-11 flex lg:w-[36.5rem] w-[20rem] p-2  rounded-full  items-center border border-[#E9EAEB] justify-around mx-auto gap-1">
       {links.map((link, index) => (
         <Link
           key={index}

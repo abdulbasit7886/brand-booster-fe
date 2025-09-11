@@ -19,11 +19,13 @@ const HomePage = () => {
       <ResultCard />
       <Casestudy />
       <PulishPackage />
-      <Pricing />
+      {/* <Pricing /> */}
       <MoneyBack />
       <Whyuse />
       <Question />
-      <ReadyGrow />
+      <div className="px-[3%]">
+        <ReadyGrow />
+      </div>
       <Footer />
     </div>
   );

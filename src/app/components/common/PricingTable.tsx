@@ -305,12 +305,13 @@ export const PricingTable: React.FC = () => {
                 </td>
               </tr>
 
-              {overview.map((row, idx) => (
+              {overview.map((row:any, idx) => (
                 <tr key={idx} className={`odd:bg-white even:bg-gray-50`}>
                   <td className="p-2 lg:p-3 text-left font-medium text-xs lg:text-sm flex items-center gap-2 sticky left-0 bg-white z-10">
                     {row.label}
+                    <Image src={row.img} alt="" className="lg:h-4 lg:w-auto"/>
                   </td>
-                  {plans.map((p, i) => (
+                  {plans.map((p:any, i) => (
                     <td key={i} className="py-2 lg:py-3">
                       {p[row.key] ? <Check /> : <Cross />}
                     </td>

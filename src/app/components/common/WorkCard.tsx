@@ -5,7 +5,7 @@ import Image from "next/image";
 const WorkCard = () => {
   return (
     <div className="flex items-center justify-center flex-wrap lg:flex-nowrap   lg:gap-40 gap-6  px-10    lg:my-25">
-      {CardData.map((item, index) => {
+      {CardData.map((item:any, index:number) => {
         return (
           <div
             className="flex flex-col items-center justify-center text-center gap-4 lg:w-54 lg:my-0  h-auto flex-1/1"
