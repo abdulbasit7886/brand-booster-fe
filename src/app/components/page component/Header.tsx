@@ -2,10 +2,11 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
-import brandLogo from "../../asset/images/c logos/datafloqa.svg";
-import boostIcon from "../../asset/icons/booster.svg";
+
 import bannerimage from "../../asset/images/image 1.png";
-import brandLogo2 from "../../asset/icons/dj.png";
+import brandLogo from "../../asset/images/c logos/datafloqa.svg";
+import brandLogo2 from "../../asset/icons/dj.svg";
+import boostIcon from "../../asset/icons/booster.svg";
 import { CImages, images } from "../../data/Images";
 
 // Define types for the carousel items

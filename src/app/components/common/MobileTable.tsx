@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { FaCheck, FaX } from "react-icons/fa6";
-import img1 from "../../asset/images/c logos/g.png";
-import img2 from "../../asset/images/c logos/bi.png";
-import img3 from "../../asset/images/c logos/ap.png";
-import img4 from "../../asset/images/c logos/datafloq.png";
-import img5 from "../../asset/images/c logos/benziga.png";
-import img6 from "../../asset/images/c logos/si.png";
-import img7 from "../../asset/images/c logos/newsbreak.png";
-import img8 from "../../asset/images/c logos/sotu.png";
-import img9 from "../../asset/images/c logos/drimble.png";
+import img1 from "../../asset/images/c logos/g.svg";
+import img2 from "../../asset/images/c logos/bi.svg";
+import img3 from "../../asset/images/c logos/ap.svg";
+import img4 from "../../asset/images/c logos/datafloq.svg";
+import img5 from "../../asset/images/c logos/benziga.svg";
+import img6 from "../../asset/images/c logos/si.svg";
+import img7 from "../../asset/images/c logos/newsbreak.svg";
+import img8 from "../../asset/images/c logos/sotu.svg";
+import img9 from "../../asset/images/c logos/drimble.svg";
 import engFlag from "../../asset/images/c logos/eng.png";
 import dutchFlag from "../../asset/images/c logos/du.png";
 import Image, { StaticImageData } from "next/image";
@@ -288,58 +288,91 @@ const MobileTable: React.FC = () => {
               {plan.heading}
             </h1>
             <div className="space-y-3 mt-3">
-              <h3 className="text-2xl font-semibold text-gray-900">{plan.price}</h3>
+              <h3 className="text-2xl font-semibold text-gray-900">
+                {plan.price}
+              </h3>
               <span className="text-sm text-gray-600 block">{plan.title}</span>
               <button className="w-full text-white rounded-full font-normal capitalize h-11 bg-gradient-to-tr from-sky to-blue ">
                 get started
               </button>
             </div>
           </div>
-          
+
           <div className="bg-white">
             <div className="p-4 bg-gray-50 ">
               <h2 className="text-sm font-semibold text-[#387987]">Overview</h2>
             </div>
             {planOverviews[plan.heading].map((row, rowIdx) => (
-              <div key={rowIdx} className={`flex justify-between items-center p-4 ${rowIdx % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}>
+              <div
+                key={rowIdx}
+                className={`flex justify-between items-center p-4 ${
+                  rowIdx % 2 === 0 ? "bg-white" : "bg-gray-50"
+                }`}
+              >
                 <div className="flex items-center gap-2">
-                  <span className="font-medium text-sm text-gray-800">{row.label}</span>
+                  <span className="font-medium text-sm text-gray-800">
+                    {row.label}
+                  </span>
                   <span className="text-xs text-gray-500 border rounded-full w-4 h-4 flex items-center justify-center flex-shrink-0">
                     ?
                   </span>
                 </div>
                 <div className="text-sm text-gray-700 w-[25%] px-auto flex items-center justify-center">
                   {row.isBool ? (
-                    plan[row.key] ? <Check /> : <Cross />
+                    plan[row.key] ? (
+                      <Check />
+                    ) : (
+                      <Cross />
+                    )
                   ) : (
                     plan[row.key]
                   )}
                 </div>
               </div>
             ))}
-            
+
             <div className="p-4 bg-gray-50 ">
-              <h2 className="text-sm font-semibold text-[#387987]">Included Outlets</h2>
+              <h2 className="text-sm font-semibold text-[#387987]">
+                Included Outlets
+              </h2>
             </div>
             {planOutlets[plan.heading].map((row, rowIdx) => (
-              <div key={rowIdx} className={`flex justify-between items-center py-4 px-6 ${rowIdx % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}>
+              <div
+                key={rowIdx}
+                className={`flex justify-between items-center py-4 px-6 ${
+                  rowIdx % 2 === 0 ? "bg-white" : "bg-gray-50"
+                }`}
+              >
                 <div className="flex items-center gap-2 w-[75%]">
-                  <span className="font-medium text-sm text-gray-800">{row.label}</span>
-                  {row.img && <Image src={row.img} alt="" className="h-4 w-auto" />}
+                  <span className="font-medium text-sm text-gray-800">
+                    {row.label}
+                  </span>
+                  {row.img && (
+                    <Image src={row.img} alt="" className="h-4 w-auto" />
+                  )}
                 </div>
                 <div className="text-sm text-gray-700 w-[25%] px-auto flex items-center justify-center">
                   {plan[row.key] ? <Check /> : <Cross />}
                 </div>
               </div>
             ))}
-            
+
             <div className="p-4 bg-gray-50 ">
-              <h2 className="text-sm font-semibold text-[#387987]">Accepted Topics</h2>
+              <h2 className="text-sm font-semibold text-[#387987]">
+                Accepted Topics
+              </h2>
             </div>
             {planTopics[plan.heading].map((row, rowIdx) => (
-              <div key={rowIdx} className={`flex justify-between items-center p-4 ${rowIdx % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}>
+              <div
+                key={rowIdx}
+                className={`flex justify-between items-center p-4 ${
+                  rowIdx % 2 === 0 ? "bg-white" : "bg-gray-50"
+                }`}
+              >
                 <div className="flex items-center gap-2">
-                  <span className="font-medium text-sm text-gray-800">{row.label}</span>
+                  <span className="font-medium text-sm text-gray-800">
+                    {row.label}
+                  </span>
                   <span className="text-xs text-gray-500  rounded-full w-4 h-4 flex items-center justify-center flex-shrink-0">
                     ?
                   </span>
@@ -349,7 +382,7 @@ const MobileTable: React.FC = () => {
                 </div>
               </div>
             ))}
-            
+
             <div className="p-4 ">
               <button className="w-full py-3 bg-gradient-to-tr from-sky to-blue text-white text-base font-semibold rounded-full shadow-md ">
                 Get started
