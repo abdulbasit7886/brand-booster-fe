@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Faqs } from "../../data/Faqs";
-import { FaMinus, FaPlus } from "react-icons/fa6";
 import Dropdown from "../ui/Dropdown";
 import Image from "next/image";
 import minusIcon from "../../asset/icons/minus-circle.svg";
