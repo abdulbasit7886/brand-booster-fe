@@ -4,8 +4,11 @@ import image2 from "../../asset/images/avater/aa.png";
 import cicon1 from "../../asset/images/c logos/yf.svg";
 import cicon2 from "../../asset/images/c logos/dj.svg";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const MoneyBack = () => {
+  const router = useRouter();
+
   return (
     <div className="lg:w-[95%] w-[95%] relative lg:h-130 flex flex-col items-center mx-auto  lg:my-40 lg:pt-26  p-6 lg:px-15 bg-[#C8D0FA50] rounded-2xl overflow-hidden ">
       <div className="text-center  flex items-center justify-center flex-col">
@@ -19,7 +22,10 @@ const MoneyBack = () => {
             entitled to a full refund.
           </p>
         </div>
-        <button className="bg-gradient-to-tr from-sky to-blue  lg:w-[230px]  lg:h-14  w-full py-3 flex items-center justify-center  text-white font-normal relative  lg:text-lg text-sm  rounded-full lg:mt-11 mt-6 cursor-pointer border-1 border-sky">
+        <button
+          onClick={() => router.push("/coming-soon")}
+          className="bg-gradient-to-tr from-sky to-blue  lg:w-[230px]  lg:h-14  w-full py-3 flex items-center justify-center  text-white font-normal relative  lg:text-lg text-sm  rounded-full lg:mt-11 mt-6 cursor-pointer border-1 border-sky"
+        >
           Get started
         </button>
       </div>

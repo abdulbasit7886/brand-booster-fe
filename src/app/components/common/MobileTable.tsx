@@ -12,6 +12,7 @@ import img9 from "../../asset/images/c logos/drimble.svg";
 // import engFlag from "../../asset/images/c logos/eng.png";
 // import dutchFlag from "../../asset/images/c logos/du.png";
 import Image, { StaticImageData } from "next/image";
+import { useRouter } from "next/navigation";
 
 type Plan = {
   heading: string;
@@ -279,6 +280,8 @@ const Cross = () => (
 );
 
 const MobileTable: React.FC = () => {
+  const router = useRouter();
+
   return (
     <div className="lg:hidden block flex-col w-[95%] mx-auto mt-10">
       {plans.map((plan, idx) => (
@@ -292,7 +295,10 @@ const MobileTable: React.FC = () => {
                 {plan.price}
               </h3>
               <span className="text-sm text-gray-600 block">{plan.title}</span>
-              <button className="w-full text-white rounded-full font-normal capitalize h-11 bg-gradient-to-tr from-sky to-blue ">
+              <button
+                onClick={() => router.push("/coming-soon")}
+                className="w-full text-white rounded-full font-normal capitalize h-11 bg-gradient-to-tr from-sky to-blue "
+              >
                 get started
               </button>
             </div>
@@ -384,7 +390,10 @@ const MobileTable: React.FC = () => {
             ))}
 
             <div className="p-4 ">
-              <button className="w-full py-3 bg-gradient-to-tr from-sky to-blue text-white text-base font-semibold rounded-full shadow-md ">
+              <button
+                onClick={() => router.push("/coming-soon")}
+                className="w-full py-3 bg-gradient-to-tr from-sky to-blue text-white text-base font-semibold rounded-full shadow-md "
+              >
                 Get started
               </button>
             </div>

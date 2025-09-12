@@ -5,10 +5,10 @@ import MobileTable from "../common/MobileTable";
 
 const Pricing = () => {
   const links = [
-    { name: "none", to: "/" },
-    { name: "small", to: "/" },
-    { name: "regular", to: "/" },
-    { name: "long", to: "/" },
+    { name: "none", to: "/coming-soon" },
+    { name: "small", to: "/coming-soon" },
+    { name: "regular", to: "/coming-soon" },
+    { name: "long", to: "/coming-soon" },
   ];
   return (
     <div className="lg:mt-21 mt-5 flex flex-col justify-center items-center py-8  ">
@@ -31,7 +31,7 @@ const Pricing = () => {
         <PricingTable />
       </div>
       <div className="lg-hidden block w-full">
-        <MobileTable/>
+        <MobileTable />
       </div>
     </div>
   );

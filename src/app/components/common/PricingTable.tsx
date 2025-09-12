@@ -12,6 +12,7 @@ import img9 from "../../asset/images/c logos/drimble.svg";
 import engFlag from "../../asset/images/c logos/eng.svg";
 import dutchFlag from "../../asset/images/c logos/du.svg";
 import Image, { StaticImageData } from "next/image";
+import { useRouter } from "next/navigation";
 type Plan = {
   heading: string;
   price: string;
@@ -192,6 +193,8 @@ const Cross = () => (
 );
 
 export const PricingTable: React.FC = () => {
+  const router = useRouter();
+
   const [active, setActive] = useState<"en" | "nl">("en");
 
   return (
@@ -255,7 +258,10 @@ export const PricingTable: React.FC = () => {
                         {plan.title}
                       </div>
                     </div>
-                    <button className="mt-2 lg:mt-3 w-full py-2 lg:py-3 bg-gradient-to-tr from-sky to-blue text-white text-sm lg:text-base font-semibold rounded-full shadow-md hover:opacity-90 transition cursor-pointer">
+                    <button
+                      onClick={() => router.push("/coming-soon")}
+                      className="mt-2 lg:mt-3 w-full py-2 lg:py-3 bg-gradient-to-tr from-sky to-blue text-white text-sm lg:text-base font-semibold rounded-full shadow-md hover:opacity-90 transition cursor-pointer"
+                    >
                       Get started
                     </button>
                   </th>
@@ -351,7 +357,10 @@ export const PricingTable: React.FC = () => {
                     key={idx}
                     className="p-4 lg:p-6 text-[#181D27] space-y-2 lg:space-y-3 text-left bg-white"
                   >
-                    <button className="w-full py-2 lg:py-3 bg-gradient-to-tr from-sky to-blue text-white text-sm lg:text-base font-semibold rounded-full shadow-md hover:opacity-90 transition cursor-pointer">
+                    <button
+                      onClick={() => router.push("/coming-soon")}
+                      className="w-full py-2 lg:py-3 bg-gradient-to-tr from-sky to-blue text-white text-sm lg:text-base font-semibold rounded-full shadow-md hover:opacity-90 transition cursor-pointer"
+                    >
                       Get started
                     </button>
                   </td>

@@ -12,9 +12,9 @@ interface FAQItem {
 
 const Questionboard = () => {
   const link = [
-    { name: "service" },
-    { name: "writing" },
-    { name: "publishing" },
+    { name: "service", to: "/coming-soon" },
+    { name: "writing", to: "/coming-soon" },
+    { name: "publishing", to: "/coming-soon" },
   ];
   const [active, setActive] = useState<string>("service");
   const [openIndex, setOpenIndex] = useState<number | null>(null);

@@ -8,6 +8,7 @@ import brandLogo from "../../asset/images/c logos/datafloqa.svg";
 import brandLogo2 from "../../asset/icons/dj.svg";
 import boostIcon from "../../asset/icons/booster.svg";
 import { CImages, images } from "../../data/Images";
+import { useRouter } from "next/navigation";
 
 // Define types for the carousel items
 interface CarouselItem {
@@ -18,6 +19,8 @@ interface CarouselItem {
 }
 
 const Header: React.FC = () => {
+  const router = useRouter();
+
   // Use the same image for all slides as requested
   const [carouselItems] = useState<CarouselItem[]>([
     {
@@ -235,7 +238,10 @@ const Header: React.FC = () => {
               </div>
             </div>
             <div className="flex flex-col lg:items-start items-center">
-              <button className="flex items-center justify-center lg:w-[220px] lg:h-16 h-12 w-full gap-2 text-sm lg:text-xl bg-gradient-to-tr from-sky to-blue text-white rounded-full text-semibold">
+              <button
+                onClick={() => router.push("/coming-soon")}
+                className="flex items-center justify-center lg:w-[220px] lg:h-16 h-12 w-full gap-2 text-sm lg:text-xl bg-gradient-to-tr from-sky to-blue text-white rounded-full text-semibold"
+              >
                 <Image src={boostIcon} alt="icon" /> Boost Now
               </button>
 

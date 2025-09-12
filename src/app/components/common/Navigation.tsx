@@ -4,8 +4,10 @@ import logo from "../../asset/logo/logo.png";
 import boostIcon from "../../asset/icons/booster.svg";
 import Image from "next/image";
 import { FaBars, FaX } from "react-icons/fa6";
+import { useRouter } from "next/navigation";
 
 const Navigation = () => {
+  const router = useRouter();
   const [active, setActive] = useState<boolean>(false);
 
   const handleActive = () => {
@@ -15,11 +17,7 @@ const Navigation = () => {
   return (
     <div className="lg:w-[91.1%] w-screen h-15 lg:h-20 z-100 font-Inter fixed px-5 lg:top-5 lg:left-[4.45%]   flex items-center justify-between lg:px-3 lg:pr-4 lg:pl-6 pr-6 pl-4 bg-white lg:rounded-[50px]">
       <div>
-        <Image
-          src={logo}
-          alt=""
-          className="lg:h-16 lg:w-auto"
-        />
+        <Image src={logo} alt="" className="lg:h-16 lg:w-auto" />
       </div>
       <div
         className={`
@@ -43,6 +41,10 @@ const Navigation = () => {
           {NavLink.map((link, index) => {
             return (
               <li
+                onClick={() => {
+                  router.push(link.link);
+                  setActive(false);
+                }}
                 key={index}
                 className="flex items-center text-lg leading-[120%] gap-2 capitalize px-1.5 py-1 text-[#414651] cursor-pointer"
               >
@@ -56,7 +58,10 @@ const Navigation = () => {
         </ul>
       </div>
       <div className="flex items-center gap-7">
-        <div className="flex items-center lg:w-[12.31rem] lg:h-15 w-[8.31rem] h-11 justify-center lg:gap-3 gap-1.5 cursor-pointer rounded-full bg-gradient-to-tr from-sky to-blue text-white hover:opacity-90 transition-opacity duration-200">
+        <div
+          onClick={() => router.push("/coming-soon")}
+          className="flex items-center lg:w-[12.31rem] lg:h-15 w-[8.31rem] h-11 justify-center lg:gap-3 gap-1.5 cursor-pointer rounded-full bg-gradient-to-tr from-sky to-blue text-white hover:opacity-90 transition-opacity duration-200"
+        >
           <Image src={boostIcon} alt="" className="h-5 w-auto" />
           <p className="lg:text-xl text-[1rem]">Boost now</p>
         </div>
