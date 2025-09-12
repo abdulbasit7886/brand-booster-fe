@@ -210,7 +210,6 @@ const ResultCard = () => {
           );
         })}
       </div>
-      <ReadyGrow />
     </div>
   );
 };

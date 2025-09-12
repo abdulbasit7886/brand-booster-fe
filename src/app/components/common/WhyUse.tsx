@@ -44,11 +44,11 @@ const Data = [
 
 const WhyUseCard = () => {
   return (
-    <div className="lg:mt-11  flex flex-wrap  gap-6 justify-center px-[2%] ">
+    <div className="lg:mt-11  flex flex-wrap  gap-6 justify-center  ">
       {Data.map((item, index) => {
         return (
           <div
-            className="lg:w-[28%] w-[96%]  h-auto bg-[#f5f5f5] lg:px-7 lg:py-7 p-3  rounded-2xl lg:space-y-7.5 space-y-6 "
+            className="lg:w-[28%] w-[95%]  h-auto bg-[#f5f5f5] lg:px-7 lg:py-7 p-3  rounded-2xl lg:space-y-7.5 space-y-6 "
             key={index}
           >
             <div className=" lg:h-11 h-9 w-auto">

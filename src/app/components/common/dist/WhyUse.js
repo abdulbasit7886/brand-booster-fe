@@ -45,13 +45,13 @@ var Data = [
 var WhyUseCard = function () {
   return react_1["default"].createElement(
     "div",
-    { className: "lg:mt-11  flex flex-wrap  gap-6 justify-center px-[2%] " },
+    { className: "lg:mt-11  flex flex-wrap  gap-6 justify-center  " },
     Data.map(function (item, index) {
       return react_1["default"].createElement(
         "div",
         {
           className:
-            "lg:w-[28%] w-[96%]  h-auto bg-[#f5f5f5] lg:px-7 lg:py-7 p-3  rounded-2xl lg:space-y-7.5 space-y-6 ",
+            "lg:w-[28%] w-[95%]  h-auto bg-[#f5f5f5] lg:px-7 lg:py-7 p-3  rounded-2xl lg:space-y-7.5 space-y-6 ",
           key: index,
         },
         react_1["default"].createElement(

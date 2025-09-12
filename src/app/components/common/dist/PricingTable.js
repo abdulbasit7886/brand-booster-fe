@@ -177,7 +177,7 @@ exports.PricingTable = function () {
     setActive = _a[1];
   return react_1["default"].createElement(
     "div",
-    { className: "w-full p-4 mt-10 overflow-hidden" },
+    { className: "w-[90%] lg:mx-auto p-4 mt-10 overflow-hidden" },
     react_1["default"].createElement(
       "div",
       { className: "lg:overflow-x-visible overflow-x-auto" },

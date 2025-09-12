@@ -1,13 +1,14 @@
 import React from "react";
-import {PricingTable} from "../common/PricingTable";
+import { PricingTable } from "../common/PricingTable";
 import NavbarP from "../ui/NavbarP";
+import MobileTable from "../common/MobileTable";
 
 const Pricing = () => {
   const links = [
-    { name: "none", to: "/limited" },
-    { name: "small", to: "/popular" },
-    { name: "regular", to: "/autharity" },
-    { name: "long", to: "/ultimate" },
+    { name: "none", to: "/" },
+    { name: "small", to: "/" },
+    { name: "regular", to: "/" },
+    { name: "long", to: "/" },
   ];
   return (
     <div className="lg:mt-21 mt-5 flex flex-col justify-center items-center py-8  ">
@@ -21,10 +22,17 @@ const Pricing = () => {
         </p>
       </div>
       <div className="space-y-6 flex items-center justify-center flex-col">
-        <span className="text-lg text-textD font-semibold capitalize ">writing packages</span>
+        <span className="text-lg text-textD font-semibold capitalize ">
+          writing packages
+        </span>
         <NavbarP links={links} />
       </div>
-      <PricingTable />
+      <div className="lg:block hidden w-full">
+        <PricingTable />
+      </div>
+      <div className="lg-hidden block w-full">
+        <MobileTable/>
+      </div>
     </div>
   );
 };
