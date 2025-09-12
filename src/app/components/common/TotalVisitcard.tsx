@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import img1 from "../../asset/images/c logos/msn.png";
-import img2 from "../../asset/images/c logos/yahoo.png";
-import img3 from "../../asset/images/c logos/drimble.png";
+import img1 from "../../asset/images/c logos/msn.svg";
+import img2 from "../../asset/images/c logos/yahoo.svg";
+import img3 from "../../asset/images/c logos/drimble.svg";
 import Image, { StaticImageData } from "next/image";
 type Card = string;
 type CardLink = {

@@ -1,8 +1,8 @@
 import React from "react";
 import image1 from "../../asset/images/avater/aa2.png";
 import image2 from "../../asset/images/avater/aa.png";
-import cicon1 from "../../asset/images/c logos/yf.png";
-import cicon2 from "../../asset/images/c logos/dj.png";
+import cicon1 from "../../asset/images/c logos/yf.svg";
+import cicon2 from "../../asset/images/c logos/dj.svg";
 import Image from "next/image";
 
 const MoneyBack = () => {
@@ -14,7 +14,9 @@ const MoneyBack = () => {
             money back gurantee
           </h1>
           <p className="lg:text-xl text-sm px-4 text-[#414651] leading-[170%] lg:w-[60%] mx-auto ">
-            In the event that we cannot publish your news story on the news outlets included in your chosen publishing package, you will be entitled to a full refund.
+            In the event that we cannot publish your news story on the news
+            outlets included in your chosen publishing package, you will be
+            entitled to a full refund.
           </p>
         </div>
         <button className="bg-gradient-to-tr from-sky to-blue  lg:w-[230px]  lg:h-14  w-full py-3 flex items-center justify-center  text-white font-normal relative  lg:text-lg text-sm  rounded-full lg:mt-11 mt-6 cursor-pointer border-1 border-sky">
@@ -33,7 +35,11 @@ const MoneyBack = () => {
           className="absolute top-29  lg:block hidden  right-32"
         />
         <div className="relative z-2  -bottom-23 -left-6 lg:left-0 lg:bottom-0 -rotate-45">
-          <Image src={image1} alt="image" className="lg:left-11 lg:top-12.5 lg:w-auto lg:h-auto   w-20 h-auto" />
+          <Image
+            src={image1}
+            alt="image"
+            className="lg:left-11 lg:top-12.5 lg:w-auto lg:h-auto   w-20 h-auto"
+          />
         </div>
         <div className="absolute top-30 right-10 lg:block hidden ">
           <Image src={image2} alt="image" className="" />

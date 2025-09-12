@@ -1,10 +1,10 @@
 import React from "react";
-import magnifier from "../../asset/icons/magnifier.png";
-import pen from "../../asset/icons/pen.png";
-import support from "../../asset/icons/support.png";
-import trust from "../../asset/icons/trust.png";
-import report from "../../asset/icons/report.png";
-import verified from "../../asset/icons/verified.png";
+import magnifier from "../../asset/icons/magnifier.svg";
+import pen from "../../asset/icons/pen.svg";
+import support from "../../asset/icons/support.svg";
+import trust from "../../asset/icons/trust.svg";
+import report from "../../asset/icons/report.svg";
+import verified from "../../asset/icons/verified.svg";
 import Image from "next/image";
 
 const Data = [
@@ -52,8 +52,12 @@ const WhyUseCard = () => {
             key={index}
           >
             <div className=" lg:h-11 h-9 w-auto">
-              <Image src={item.img} alt="" className="h-full w-full"
-              style={{height:'50px', width:'auto'}} />
+              <Image
+                src={item.img}
+                alt=""
+                className="h-full w-full"
+                style={{ height: "50px", width: "auto" }}
+              />
             </div>
             <div className="space-y-3">
               <h3 className="lg:text-4xl text-xl font-futura font-bold uppercase text-blue-900 ">

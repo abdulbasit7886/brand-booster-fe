@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import NavLink from "../../data/NavLink";
 import logo from "../../asset/logo/logo.png";
-import boostIcon from "../../asset/icons/booster.png";
+import boostIcon from "../../asset/icons/booster.svg";
 import Image from "next/image";
 import { FaBars, FaX } from "react-icons/fa6";
 

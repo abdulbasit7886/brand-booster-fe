@@ -4,13 +4,13 @@ import Image from "next/image";
 import Link from "next/link";
 
 import logo from "../../asset/logo/logo 2.png";
-import socialIcon1 from "../../asset/icons/twitter.png";
-import socialIcon2 from "../../asset/icons/link.png";
-import socialIcon3 from "../../asset/icons/face.png";
-import socialIcon4 from "../../asset/icons/insta.png";
+import socialIcon1 from "../../asset/icons/twitter.svg";
+import socialIcon2 from "../../asset/icons/link.svg";
+import socialIcon3 from "../../asset/icons/face.svg";
+import socialIcon4 from "../../asset/icons/insta.svg";
 
-type FooterLink = { to: string; name: string; };
-type FooterSection = { heading: string; links: FooterLink[]; };
+type FooterLink = { to: string; name: string };
+type FooterSection = { heading: string; links: FooterLink[] };
 
 const footerLinks: FooterSection[] = [
   {
@@ -98,7 +98,9 @@ const Footer: React.FC = () => {
               </li>
               <li className="flex items-center gap-3">
                 <FaEnvelope className="text-[#AED8E1]" />
-                <span className="text-sm lg:text-base">hello@brandboosterhq.com</span>
+                <span className="text-sm lg:text-base">
+                  hello@brandboosterhq.com
+                </span>
               </li>
             </ul>
           </div>

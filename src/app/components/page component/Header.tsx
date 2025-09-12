@@ -1,8 +1,8 @@
 import React from "react";
 import { CImages, images } from "../../data/Images";
 import bannerimage from "../../asset/images/image 1.png";
-import brandLogo from "../../asset/images/c logos/datafloqa.png";
-import boostIcon from "../../asset/icons/booster.png";
+import brandLogo from "../../asset/images/c logos/datafloqa.svg";
+import boostIcon from "../../asset/icons/booster.svg";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 import Image from "next/image";
 
