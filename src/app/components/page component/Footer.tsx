@@ -37,12 +37,12 @@ const footerLinks: FooterSection[] = [
   {
     heading: "Policies",
     links: [
-      { to: "/coming-soon", name: "Terms of Service" },
-      { to: "/coming-soon", name: "Privacy Policy" },
-      { to: "/coming-soon", name: "Refund Policy" },
-      { to: "/coming-soon", name: "Cookie Policy" },
-      { to: "/coming-soon", name: "Cookie Consent" },
-      { to: "/coming-soon", name: "Disclaimer" },
+      { to: "https://liplynig.com/general-terms", name: "Terms of Service" },
+      { to: "https://liplynig.com/privacy-policy", name: "Privacy Policy" },
+      { to: "https://liplynig.com/general-terms", name: "Refund Policy" },
+      // { to: "/coming-soon", name: "Cookie Policy" },
+      { to: "https://liplynig.com/cookie-policy", name: "Cookie Consent" },
+      { to: "https://liplynig.com/disclaimer", name: "Disclaimer" },
     ],
   },
 ];
@@ -58,7 +58,10 @@ const Footer: React.FC = () => {
           <div className="col-span-2 lg:col-span-1 space-y-4">
             <Image src={logo} alt="Brand Logo" className="h-8 w-auto" />
             <p className="text-[#94979C] leading-7 text-sm sm:text-base">
-              Liplyn Information Group <br />
+              <Link href={"http://www.liplynig.com"}>
+                Liplyn Information Group
+              </Link>{" "}
+              <br />
               Marathon 9a, 1213 PE Hilversum, <br />
               The Netherlands
             </p>
@@ -117,7 +120,14 @@ const Footer: React.FC = () => {
           <li>
             <Image src={socialIcon1} alt="Twitter" className="h-5 w-auto" />
           </li>
-          <li>
+          <li
+            onClick={() =>
+              window.open(
+                "https://www.linkedin.com/company/brandboosterhq",
+                "_blank"
+              )
+            }
+          >
             <Image src={socialIcon2} alt="LinkedIn" className="h-5 w-auto" />
           </li>
           <li>
