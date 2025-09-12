@@ -5,7 +5,7 @@ import Image from "next/image";
 const WorkCard = () => {
   return (
     <div className="flex items-center justify-center flex-wrap lg:flex-nowrap   lg:gap-40 gap-6  px-10    lg:my-25">
-      {CardData.map((item:any, index:number) => {
+      {CardData.map((item, index) => {
         return (
           <div
             className="flex flex-col items-center justify-center text-center gap-4 lg:w-54 lg:my-0  h-auto flex-1/1"
@@ -18,7 +18,9 @@ const WorkCard = () => {
               <h3 className="font-futura font-bold lg:text-4xl tracking-[-2%] text-[1rem] uppercase text-blue-900 ">
                 {item.heading}
               </h3>
-              <p className="lg:text-[16px] text-sm text-textB lg:px-0 px-7  ">{item.subtext}</p>
+              <p className="lg:text-[16px] text-sm text-textB lg:px-0 px-7  ">
+                {item.subtext}
+              </p>
             </div>
           </div>
         );

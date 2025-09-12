@@ -20,7 +20,6 @@ import avater2 from "../../asset/images/avater/a (1).png";
 import avater3 from "../../asset/images/avater/a (2).png";
 import avater4 from "../../asset/images/avater/a (3).png";
 import avater5 from "../../asset/images/avater/a (4).png";
-import ReadyGrow from "./ReadyGrow";
 import Image, { StaticImageData } from "next/image";
 type ResultCardItem = {
   heading: string;

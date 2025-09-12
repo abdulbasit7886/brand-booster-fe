@@ -139,13 +139,17 @@ const plans: Plan[] = [
     trading: false,
   },
 ];
+type Rows = {
+  label: string;
+  key: keyof Plan;
+  isBool?: boolean;
+};
 type Row = {
   label: string;
   key: keyof Plan;
-  img?: StaticImageData;
-  isBool?: boolean;
+  img: StaticImageData;
 };
-const overviews: Row[] = [
+const overviews: Rows[] = [
   { label: "Total News Outlets", key: "outlets" },
   { label: "Max Domain Authority", key: "authority" },
   { label: "Monthly Visitors", key: "visitors" },
@@ -165,7 +169,7 @@ const overview: Row[] = [
   { label: "SpotOnTheUSA", key: "spot", img: img8 },
   { label: "Dirimble.com", key: "dir", img: img9 },
 ];
-const overviewss: Row[] = [
+const overviewss: Rows[] = [
   { label: "Betting & Sports Picks", key: "betting" },
   { label: "Blockchain", key: "blockchain" },
   { label: "Cryptocurrency (Buying / Trading)", key: "crypto" },
@@ -301,13 +305,13 @@ export const PricingTable: React.FC = () => {
                 </td>
               </tr>
 
-              {overview.map((row: any, idx) => (
+              {overview.map((row, idx) => (
                 <tr key={idx} className={`odd:bg-white even:bg-gray-50`}>
                   <td className="p-2 lg:p-3 text-left font-medium text-xs lg:text-sm flex items-center gap-2 sticky left-0 bg-white z-10">
                     {row.label}
-                    <Image src={row.img} alt="" className="lg:h-4 lg:w-auto" />
+                    <Image src={row?.img} alt="" className="lg:h-4 lg:w-auto" />
                   </td>
-                  {plans.map((p: any, i) => (
+                  {plans.map((p, i) => (
                     <td key={i} className="py-2 lg:py-3">
                       {p[row.key] ? <Check /> : <Cross />}
                     </td>

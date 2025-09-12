@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { FaCheck, FaX } from "react-icons/fa6";
 import img1 from "../../asset/images/c logos/g.svg";
 import img2 from "../../asset/images/c logos/bi.svg";
@@ -9,8 +9,8 @@ import img6 from "../../asset/images/c logos/si.svg";
 import img7 from "../../asset/images/c logos/newsbreak.svg";
 import img8 from "../../asset/images/c logos/sotu.svg";
 import img9 from "../../asset/images/c logos/drimble.svg";
-import engFlag from "../../asset/images/c logos/eng.png";
-import dutchFlag from "../../asset/images/c logos/du.png";
+// import engFlag from "../../asset/images/c logos/eng.png";
+// import dutchFlag from "../../asset/images/c logos/du.png";
 import Image, { StaticImageData } from "next/image";
 
 type Plan = {

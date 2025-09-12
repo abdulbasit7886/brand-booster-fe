@@ -65,6 +65,7 @@ const Header: React.FC = () => {
     }, 5000);
 
     return () => clearInterval(interval);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentIndex]);
 
   const Carousel = ({ isMobile = false }: { isMobile?: boolean }) => {

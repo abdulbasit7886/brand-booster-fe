@@ -27,13 +27,13 @@ const Questionboard = () => {
     <div className="lg:w-[75%] w-[100%] h-auto mx-auto bg-white mt-11 flex flex-col items-center lg:rounded-4xl rounded-2xl lg:pb-10 py-5 ">
       <Dropdown links={link} />
       <ul className="lg:flex hidden w-full lg:gap-4 lg:h-20 h-15 items-end justify-center lg:mx-auto border-b border-[#ccc] mb-5">
-        {link.map((item: any, i) => {
+        {link.map((item, i) => {
           return (
             <li
               key={i}
-              onClick={() => setActive(item)}
+              onClick={() => setActive(item.name)}
               className={`w-full h-full font-semibold text-center flex items-end justify-center pb-2  lg:text-lg text-sm capitalize ${
-                active === item
+                active === item.name
                   ? "text-[#4FAABE] border-b-2 border-[#4FAABE]"
                   : "text-textB"
               }`}
