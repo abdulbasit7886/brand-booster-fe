@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "../../styles/Rescard.css";
-import grow from "../../asset/icons/grow.png";
-import medal from "../../asset/icons/medal.png";
-import heart from "../../asset/icons/heart.png";
-import verified from "../../asset/icons/verified.png";
-import rank from "../../asset/icons/rank.png";
+import grow from "../../asset/icons/grow.svg";
+import medal from "../../asset/icons/medal.svg";
+import heart from "../../asset/icons/heart.svg";
+import verified from "../../asset/icons/verified.svg";
+import rank from "../../asset/icons/rank.svg";
 import bgimg1 from "../../asset/images/result images/a (1).jpg";
 import bgimg2 from "../../asset/images/result images/a (3).png";
 import bgimg3 from "../../asset/images/result images/a (1).png";

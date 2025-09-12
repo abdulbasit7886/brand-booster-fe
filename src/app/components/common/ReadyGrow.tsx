@@ -1,5 +1,5 @@
 import React from "react";
-import boosticon from "../../asset/icons/flash g.png";
+import boosticon from "../../asset/icons/flash g.svg";
 import Image from "next/image";
 
 const ReadyGrow = () => {

@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import { FaCheck, FaX } from "react-icons/fa6";
-import img1 from "../../asset/images/c logos/g.png";
-import img2 from "../../asset/images/c logos/bi.png";
-import img3 from "../../asset/images/c logos/ap.png";
-import img4 from "../../asset/images/c logos/datafloq.png";
-import img5 from "../../asset/images/c logos/benziga.png";
-import img6 from "../../asset/images/c logos/si.png";
-import img7 from "../../asset/images/c logos/newsbreak.png";
-import img8 from "../../asset/images/c logos/sotu.png";
-import img9 from "../../asset/images/c logos/drimble.png";
-import engFlag from "../../asset/images/c logos/eng.png";
-import dutchFlag from "../../asset/images/c logos/du.png";
+import img1 from "../../asset/images/c logos/g.svg";
+import img2 from "../../asset/images/c logos/bi.svg";
+import img3 from "../../asset/images/c logos/ap.svg";
+import img4 from "../../asset/images/c logos/datafloq.svg";
+import img5 from "../../asset/images/c logos/benziga.svg";
+import img6 from "../../asset/images/c logos/si.svg";
+import img7 from "../../asset/images/c logos/newsbreak.svg";
+import img8 from "../../asset/images/c logos/sotu.svg";
+import img9 from "../../asset/images/c logos/drimble.svg";
+import engFlag from "../../asset/images/c logos/eng.svg";
+import dutchFlag from "../../asset/images/c logos/du.svg";
 import Image, { StaticImageData } from "next/image";
 type Plan = {
   heading: string;
@@ -217,9 +217,7 @@ export const PricingTable: React.FC = () => {
                     <button
                       onClick={() => setActive("en")}
                       className={`w-full h-8 lg:h-11 rounded-full gap-1 lg:gap-2 flex items-center justify-center p-1 text-xs lg:text-sm ${
-                        active === "en"
-                          ? "bg-white text-textD"
-                          : "text-textB"
+                        active === "en" ? "bg-white text-textD" : "text-textB"
                       }`}
                     >
                       <div className="w-4 h-4 lg:w-6 lg:h-6 bg-gray-300 rounded-full flex-shrink-0">
@@ -230,13 +228,11 @@ export const PricingTable: React.FC = () => {
                     <button
                       onClick={() => setActive("nl")}
                       className={`w-full h-8 lg:h-11 rounded-full gap-1 lg:gap-2 flex items-center justify-center p-1 text-xs lg:text-sm ${
-                        active === "nl"
-                          ? "bg-white text-textD"
-                          : "text-textB"
+                        active === "nl" ? "bg-white text-textD" : "text-textB"
                       }`}
                     >
                       <div className="w-4 h-4 lg:w-6 lg:h-6 bg-gray-300 rounded-full flex-shrink-0">
-                        <Image src={dutchFlag} alt="dutch flag"/>
+                        <Image src={dutchFlag} alt="dutch flag" />
                       </div>
                       Dutch
                     </button>
@@ -305,13 +301,13 @@ export const PricingTable: React.FC = () => {
                 </td>
               </tr>
 
-              {overview.map((row:any, idx) => (
+              {overview.map((row: any, idx) => (
                 <tr key={idx} className={`odd:bg-white even:bg-gray-50`}>
                   <td className="p-2 lg:p-3 text-left font-medium text-xs lg:text-sm flex items-center gap-2 sticky left-0 bg-white z-10">
                     {row.label}
-                    <Image src={row.img} alt="" className="lg:h-4 lg:w-auto"/>
+                    <Image src={row.img} alt="" className="lg:h-4 lg:w-auto" />
                   </td>
-                  {plans.map((p:any, i) => (
+                  {plans.map((p: any, i) => (
                     <td key={i} className="py-2 lg:py-3">
                       {p[row.key] ? <Check /> : <Cross />}
                     </td>
