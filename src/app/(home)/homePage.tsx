@@ -17,15 +17,14 @@ const HomePage = () => {
       <Header />
       <HowWorks />
       <ResultCard />
+      <ReadyGrow/>
       <Casestudy />
       <PulishPackage />
-      {/* <Pricing /> */}
+      <Pricing />
       <MoneyBack />
       <Whyuse />
       <Question />
-      <div className="px-[3%]">
-        <ReadyGrow />
-      </div>
+      <ReadyGrow />
       <Footer />
     </div>
   );

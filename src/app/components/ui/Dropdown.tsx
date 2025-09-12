@@ -33,12 +33,7 @@ const Dropdown: React.FC<DropDownProps> = ({ links }) => {
           onClick={handleOpenDrop}
           role="button"
           tabIndex={0}
-          onKeyPress={(e) => {
-            if (e.key === "Enter" || e.key === " ") {
-              handleOpenDrop();
-              e.preventDefault();
-            }
-          }}
+         
         >
           <span className="text-lg capitalize">{selected.name}</span>
           <FaChevronDown

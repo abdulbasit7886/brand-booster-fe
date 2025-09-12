@@ -18,8 +18,7 @@ const Navigation = () => {
         <Image
           src={logo}
           alt=""
-          className="lg:h-12 lg:w-36.375"
-          style={{ height: "48px", width: "auto" }}
+          className="lg:h-16 lg:w-auto"
         />
       </div>
       <div

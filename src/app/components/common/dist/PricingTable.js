@@ -151,7 +151,7 @@ var Cross = function () { return (react_1["default"].createElement("div", { clas
         react_1["default"].createElement(fa6_1.FaX, null)))); };
 exports.PricingTable = function () {
     var _a = react_1.useState("en"), active = _a[0], setActive = _a[1];
-    return (react_1["default"].createElement("div", { className: "w-full p-4 mt-10 overflow-hidden" },
+    return (react_1["default"].createElement("div", { className: "w-[90%] lg:mx-auto p-4 mt-10 overflow-hidden" },
         react_1["default"].createElement("div", { className: "lg:overflow-x-visible overflow-x-auto" },
             react_1["default"].createElement("div", { className: "lg:min-w-full min-w-[800px]" },
                 react_1["default"].createElement("table", { className: "w-full text-sm text-center border-collapse" },

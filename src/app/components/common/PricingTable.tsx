@@ -191,7 +191,7 @@ export const PricingTable: React.FC = () => {
   const [active, setActive] = useState<"en" | "nl">("en");
 
   return (
-    <div className="w-full p-4 mt-10 overflow-hidden">
+    <div className="w-[90%] lg:mx-auto p-4 mt-10 overflow-hidden">
       <div className="lg:overflow-x-visible overflow-x-auto">
         <div className="lg:min-w-full min-w-[800px]">
           <table className="w-full text-sm text-center border-collapse">
