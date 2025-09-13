@@ -319,9 +319,15 @@ const MobileTable: React.FC = () => {
                   <span className="font-medium text-sm text-gray-800">
                     {row.label}
                   </span>
-                  <span className="text-xs text-gray-500 border rounded-full w-4 h-4 flex items-center justify-center flex-shrink-0">
-                    ?
-                  </span>
+                  <div className="relative group flex-shrink-0">
+                      <span className="text-xs text-gray-500 border rounded-full w-4 h-4 lg:w-5 lg:h-5 flex items-center justify-center cursor-pointer">
+                        ?
+                      </span>
+
+                      <div className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 hidden group-hover:block bg-textB text-white text-[10px] lg:text-xs rounded-md px-2 py-1 whitespace-nowrap z-20">
+                        {"Extra info here"}
+                      </div>
+                    </div>
                 </div>
                 <div className="text-sm text-gray-700 w-[25%] px-auto flex items-center justify-center">
                   {row.isBool ? (
@@ -379,9 +385,15 @@ const MobileTable: React.FC = () => {
                   <span className="font-medium text-sm text-gray-800">
                     {row.label}
                   </span>
-                  <span className="text-xs text-gray-500   border-1 rounded-full w-4 h-4 flex items-center justify-center flex-shrink-0">
-                    ?
-                  </span>
+                  <div className="relative group flex-shrink-0">
+                      <span className="text-xs text-gray-500 border rounded-full w-4 h-4 lg:w-5 lg:h-5 flex items-center justify-center cursor-pointer">
+                        ?
+                      </span>
+
+                      <div className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 hidden group-hover:block bg-textB text-white text-[10px] lg:text-xs rounded-md px-2 py-1 whitespace-nowrap z-20">
+                        {"Extra info here"}
+                      </div>
+                    </div>
                 </div>
                 <div className="text-sm text-gray-700 w-[25%] px-auto flex items-center justify-center">
                   {plan[row.key] ? <Check /> : <Cross />}
