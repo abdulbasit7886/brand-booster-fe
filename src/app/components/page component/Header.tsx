@@ -10,7 +10,6 @@ import boostIcon from "../../asset/icons/booster.svg";
 import { CImages, images } from "../../data/Images";
 import { useRouter } from "next/navigation";
 
-// Define types for the carousel items
 interface CarouselItem {
   id: number;
   banner: StaticImageData;
@@ -45,7 +44,6 @@ const Header: React.FC = () => {
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Navigation functions
   const handleNext = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex + 1 === carouselItems.length ? 0 : prevIndex + 1
@@ -101,7 +99,7 @@ const Header: React.FC = () => {
       : "lg:text-3xl md:text-sm";
 
     return (
-      <div className={containerClass}>
+      <header className={containerClass}>
         <div
           className={`${innerContainerClass} relative overflow-hidden object-bottom object-cover`}
         >
@@ -149,6 +147,8 @@ const Header: React.FC = () => {
           <div
             className={`flex z-2 items-center mx-auto gap-4 absolute flex-col bg-gradient-to-b from-transparent from-10% to-[#00000090] to-70% w-full ${contentPositionClass}`}
           >
+          
+          <div className={`flex z-2 items-center mx-auto gap-4 absolute flex-col bg-gradient-to-b from-transparent from-10% to-[#00000090] to-70% w-full ${contentPositionClass}`}>
             <motion.div
               key={`text-${currentIndex}`}
               initial={{ y: 20, opacity: 0 }}
@@ -161,6 +161,7 @@ const Header: React.FC = () => {
           </div>
 
           {/* Fixed Controls Container - Positioned absolutely and not affected by animations */}
+          
           <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
             <div className={controlsClass}>
               <button
@@ -199,11 +200,12 @@ const Header: React.FC = () => {
           </div>
         </div>
       </div>
+      </header>
     );
   };
 
   return (
-    <div className="w-screen h-auto font-inter bg-gradient-to-b from-purple lg:from-40% from-70% to-white-50 lg:to-80% to-100%">
+    <header className="w-screen h-auto font-inter bg-gradient-to-b from-purple lg:from-40% from-70% to-white-50 lg:to-80% to-100%">
       <div className="flex flex-col md:flex-row justify-between lg:px-12.5 px-5">
         <div className="w-full lg:w-[50%] lg:pl-8 flex lg:pt-62.25 pt-23 md:ml-0 md:justify-center">
           <div className="flex flex-col lg:gap-8 gap-3 md:pt-0 text-left sm:pt-20">
@@ -268,10 +270,9 @@ const Header: React.FC = () => {
           </div>
         </div>
 
-        {/* Desktop Carousel */}
         <Carousel isMobile={false} />
       </div>
-    </div>
+    </header>
   );
 };
 
