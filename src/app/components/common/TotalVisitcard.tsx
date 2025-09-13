@@ -42,20 +42,20 @@ const TotalVisitcard = () => {
     setData(cardData);
   }, []);
   return (
-    <div className="flex items-center justify-center flex-wrap lg:flex-nowrap  w-auto lg:space-x-8 space-y-4 lg:mt-11 mx-auto ">
+    <div className="flex items-center justify-center flex-wrap xl:flex-nowrap  w-auto lg:space-x-8 space-y-4 lg:mt-11 mx-auto ">
       {data.map((item, index) => {
         return (
           <div
             className="flex flex-col lg:gap-8 gap-8  lg:w-[28rem] w-[100%] mx-5 justify-center bg-white  rounded-2xl lg:px-7 p-6 lg:pb-7"
             key={index}
           >
-            <div className="lg:h-10 h-6 w-auto lg:mt-10">
+            <div className="xl:h-10 sm:h-11 h-6 w-auto 2xl:mt-5">
               <Image src={item.img} alt="image" className="h-full w-auto" />
             </div>
             <div className="flex items-center justify-between">
               <div className="flex lg:gap-16 gap-13.5 items-center justify-between ">
                 <div className="flex flex-col space-y-1">
-                  <h3 className="lg:text-3xl text-xl text-blue-900 font-futura font-bold">
+                  <h3 className="lg:text-3xl md:text-2xl text-xl text-blue-900 font-futura font-bold">
                     {item.visitor}
                   </h3>
                   <p className="lg:text-[1rem] text-sm  tracking-wide capitalize text-textB">

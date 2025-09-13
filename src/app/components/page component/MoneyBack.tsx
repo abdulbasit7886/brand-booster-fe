@@ -13,10 +13,10 @@ const MoneyBack = () => {
     <div className="lg:w-[95%] w-[95%] relative lg:h-130 flex flex-col items-center mx-auto  lg:my-40 lg:pt-26  p-6 lg:px-15 bg-[#C8D0FA50] rounded-2xl overflow-hidden ">
       <div className="text-center  flex items-center justify-center flex-col">
         <div className="lg:space-y-6  space-y-2 ">
-          <h1 className="font-futura lg:text-7xl text-2xl tracking-[1px] font-extrabold uppercase text-blue-900">
+          <h1 className="font-futura xl:text-7xl lg:text-5xl  text-2xl tracking-[1px] font-extrabold uppercase text-blue-900">
             money back gurantee
           </h1>
-          <p className="lg:text-xl text-sm px-4 text-[#414651] leading-[170%] lg:w-[60%] mx-auto ">
+          <p className="xl:text-xl lg:text-[1rem] text-sm px-4 text-[#414651] leading-[170%] lg:w-[70%] xl:w-[70%] mx-auto ">
             In the event that we cannot publish your news story on the news
             outlets included in your chosen publishing package, you will be
             entitled to a full refund.
@@ -33,14 +33,14 @@ const MoneyBack = () => {
         <Image
           src={cicon1}
           alt="cicon"
-          className="absolute lg:top-4 top-[110%] left-1   lg:left-[175px] lg:w-auto h-auto w-4"
+          className="absolute lg:top-4 top-[110%] left-1 md:hidden lg:block   lg:left-[175px] lg:w-auto h-auto w-4"
         />
         <Image
           src={cicon2}
           alt="cicon"
-          className="absolute top-29  lg:block hidden  right-32"
+          className="absolute top-29   md:hidden block  right-32"
         />
-        <div className="relative z-2  -bottom-23 -left-6 lg:left-0 lg:bottom-0 -rotate-45">
+        <div className="relative z-2  -bottom-23 -left-6 sm:block md:hidden lg:block lg:left-0 lg:bottom-0 -rotate-45">
           <Image
             src={image1}
             alt="image"

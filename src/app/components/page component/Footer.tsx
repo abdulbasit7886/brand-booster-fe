@@ -71,7 +71,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-[#0C0E12] text-white w-full mt-10">
       {/* Main container centered for 1920px desktop */}
-      <div className="max-w-full mx-auto px-6 lg:px-20 py-16">
+      <div className="max-w-full mx-auto px-6 lg:pl-20 lg:pr-16 md:pr-0 py-16">
         {/* GRID: mobile => 2 cols (so 2 items per row); lg => 5 cols (logo + 3 sections + contact) */}
         <div className="grid grid-cols-2 lg:grid-cols-5 gap-10">
           {/* Logo + address: full width on mobile (col-span-2), single column on lg */}
@@ -90,7 +90,7 @@ const Footer: React.FC = () => {
           {/* Map the footer link sections. Each will occupy 1 column (col-span-1) */}
           {footerLinks.map((section, index) => (
             <div key={index} className="col-span-1">
-              <h3 className="text-white text-base lg:text-xl font-medium uppercase tracking-wide">
+              <h3 className="text-white text-base xl:text-xl font-medium uppercase tracking-wide">
                 {section.heading}
               </h3>
               <ul className="mt-4 space-y-3">
@@ -100,7 +100,7 @@ const Footer: React.FC = () => {
                       href={link.to}
                       target={link?.blank ? "_blank" : "_self"}
                       rel={link?.blank ? "noopener noreferrer" : undefined}
-                      className="text-[#94979C] hover:text-white text-sm lg:text-base transition capitalize"
+                      className="text-[#94979C] hover:text-white text-sm lg:text-[14px] 2xl:text-base transition capitalize"
                     >
                       {link.name}
                     </Link>
@@ -112,18 +112,18 @@ const Footer: React.FC = () => {
 
           {/* Contact: will be the last column on desktop, and one of the two items on mobile rows */}
           <div className="col-span-1">
-            <h3 className="text-white text-base lg:text-xl font-medium uppercase tracking-wide">
+            <h3 className="text-white text-base 2xl:text-xl font-medium uppercase tracking-wide">
               Contact
             </h3>
             <ul className="mt-4 space-y-3 text-[#94979C]">
               <li className="text-sm lg:text-base">Contact Us</li>
-              <li className="flex items-center gap-3">
+              <li className="flex items-center 2xl:gap-3 lg:gap-1 gap-3">
                 <FaPhoneAlt className="text-[#AED8E1]" />
-                <span className="text-sm lg:text-base">+020 308 6934</span>
+                <span className="text-sm lg:text-[14px] 2xl:text-base">+020 308 6934</span>
               </li>
-              <li className="flex items-center gap-3">
-                <FaEnvelope className="text-[#AED8E1]" />
-                <span className="text-sm lg:text-base">
+              <li className="flex items-center 2xl:gap-3 lg:gap-1 gap-3">
+                <FaEnvelope className="text-[#AED8E1]  " />
+                <span className="text-sm lg:text-[14px] 2xl:text-base">
                   hello@brandboosterhq.com
                 </span>
               </li>

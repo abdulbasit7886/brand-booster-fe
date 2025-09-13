@@ -16,12 +16,12 @@ const CasestudyCard = () => {
     setData(CsData);
   }, []);
   return (
-    <div className="flex flex-wrap lg:flex-nowrap items-center justify-center  gap-5 lg:mt-20 mt-4 w-[95%] mx-auto">
+    <div className="flex flex-wrap lg:flex-wrap xl:flex-wrap 2xl:flex-nowrap items-center justify-center  gap-5 lg:mt-20 mt-4 w-[95%] mx-auto">
       {data.map((items, index) => {
         return (
           <div
             key={index}
-            className="lg:w-[22%] w-[94%] lg:h-auto   bg-lightSky relative overflow-hidden rounded-xl  "
+            className="2xl:w-[22%] md:w-[48%] xl:w-[48%] w-[500px] sm:w-[98%] lg:h-auto   bg-lightSky relative overflow-hidden rounded-xl  "
           >
             <div className="relative w-[100%] h-[20.87rem]  ">
               <Image

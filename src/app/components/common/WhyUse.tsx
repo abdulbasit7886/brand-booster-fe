@@ -48,22 +48,21 @@ const WhyUseCard = () => {
       {Data.map((item, index) => {
         return (
           <div
-            className="lg:w-[28%] w-[95%]  h-auto bg-[#f5f5f5] lg:px-7 lg:py-7 p-3  rounded-2xl lg:space-y-7.5 space-y-6 "
+            className="2xl:w-[28%] md:w-[45%] w-[95%]  h-auto bg-[#f5f5f5] lg:px-7 lg:py-7 p-3   rounded-2xl  lg:space-y-7.5 space-y-6 "
             key={index}
           >
-            <div className=" lg:h-11 h-9 w-auto">
+            <div className=" lg:w-11 w-9 h-auto  ">
               <Image
                 src={item.img}
                 alt=""
                 className="h-full w-full"
-                style={{ height: "50px", width: "auto" }}
               />
             </div>
             <div className="space-y-3">
-              <h3 className="lg:text-4xl text-xl font-futura font-bold uppercase text-blue-900 ">
+              <h3 className="xl:text-4xl lg:text-2xl text-xl font-futura font-bold uppercase text-blue-900 ">
                 {item.heading}
               </h3>
-              <p className="lg:text-lg text-sm text-textB ">{item.subtext}</p>
+              <p className="xl:text-lg text-sm text-textB ">{item.subtext}</p>
             </div>
           </div>
         );

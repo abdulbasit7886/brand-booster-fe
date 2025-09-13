@@ -210,7 +210,7 @@ export const PricingTable: React.FC = () => {
                 {plans.map((plan, idx) => (
                   <th
                     key={idx}
-                    className="text-lg lg:text-xl uppercase font-extrabold text-left px-4 lg:px-6 py-3 lg:py-4 w-[180px] lg:w-[262.4px] bg-white"
+                    className="text-lg lg:text-xl uppercase font-futura font-extrabold text-left px-4 lg:px-6 py-3 lg:py-4 w-[180px] lg:w-[262.4px] bg-white"
                   >
                     {plan.heading}
                   </th>
@@ -248,10 +248,10 @@ export const PricingTable: React.FC = () => {
                 {plans.map((plan, idx) => (
                   <th
                     key={idx}
-                    className="pt-4 lg:pt-8 text-[#181D27] space-y-3 lg:space-y-6 px-4 lg:px-6 text-left bg-white"
+                    className="pt-4 xl:w-1/4 h-[10rem] lg:h-[13rem]  lg:pt-8 text-[#181D27] space-y-3 lg:space-y-6 px-4 lg:px-6 text-left bg-white "
                   >
                     <div className="">
-                      <div className="text-xl lg:text-3xl font-semibold tracking-[-2%]">
+                      <div className="text-xl xl:text-3xl lg:text-2xl font-semibold tracking-[-2%] ">
                         {plan.price}
                       </div>
                       <div className="mt-1 text-xs leading-4 lg:leading-5 font-medium text-[#535862]">
@@ -260,7 +260,7 @@ export const PricingTable: React.FC = () => {
                     </div>
                     <button
                       onClick={() => router.push("/coming-soon")}
-                      className="mt-2 lg:mt-3 w-full py-2 lg:py-3 bg-gradient-to-tr from-sky to-blue text-white text-sm lg:text-base font-semibold rounded-full shadow-md hover:opacity-90 transition cursor-pointer"
+                      className="mt-2 xl:mt-3 xl:w-full w-[80%] py-2  xl:py-3 bg-gradient-to-tr from-sky to-blue text-white text-sm lg:text-base lg:font-normal xl:font-semibold rounded-full shadow-md hover:opacity-90 transition cursor-pointer self-end"
                     >
                       Get started
                     </button>
@@ -281,9 +281,15 @@ export const PricingTable: React.FC = () => {
                 <tr key={idx} className={`odd:bg-white even:bg-gray-50`}>
                   <td className="p-2 lg:p-3 text-left font-medium text-xs lg:text-sm leading-5 text-[#181D27] flex items-center gap-1 lg:gap-2 sticky left-0 bg-white z-10">
                     {row.label}
-                    <span className="text-xs text-gray-500 border rounded-full w-4 h-4 lg:w-5 lg:h-5 flex items-center justify-center flex-shrink-0">
-                      ?
-                    </span>
+                    <div className="relative group flex-shrink-0">
+                      <span className="text-xs text-gray-500 border rounded-full w-4 h-4 lg:w-5 lg:h-5 flex items-center justify-center cursor-pointer">
+                        ?
+                      </span>
+
+                      <div className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 hidden group-hover:block bg-textB text-white text-[10px] lg:text-xs rounded-md px-2 py-1 whitespace-nowrap z-20">
+                        {"Extra info here"}
+                      </div>
+                    </div>
                   </td>
                   {plans.map((p, i) => (
                     <td key={i} className="p-2 lg:p-3 text-center text-textB">
@@ -338,9 +344,15 @@ export const PricingTable: React.FC = () => {
                 <tr key={idx} className={`odd:bg-white even:bg-gray-50`}>
                   <td className="p-2 lg:p-3 text-left font-medium text-xs lg:text-sm text-[#181D27] flex items-center gap-1 lg:gap-2 sticky left-0 bg-white z-10">
                     {row.label}
-                    <span className="text-xs text-gray-500 border rounded-full w-4 h-4 lg:w-5 lg:h-5 flex items-center justify-center flex-shrink-0">
-                      ?
-                    </span>
+                    <div className="relative group flex-shrink-0">
+                      <span className="text-xs text-gray-500 border rounded-full w-4 h-4 lg:w-5 lg:h-5 flex items-center justify-center cursor-pointer">
+                        ?
+                      </span>
+
+                      <div className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 hidden group-hover:block bg-textB text-white text-[10px] lg:text-xs rounded-md px-2 py-1 whitespace-nowrap z-20">
+                        {"Extra info here"}
+                      </div>
+                    </div>
                   </td>
                   {plans.map((p, i) => (
                     <td key={i} className="py-2 lg:py-3">

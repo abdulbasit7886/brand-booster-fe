@@ -81,7 +81,7 @@ const ResultCard = () => {
 
   return (
     <div className="bg-[#C8D0FA50] lg:pt-20 pt-15 px-5 lg:pb-24 pb-4 ">
-      <h1 className="font-futura font-bold text-[2rem] lg:text-7xl tracking-[-2%] uppercase text-blue-900 text-center mb-10">
+      <h1 className="font-futura font-bold text-[2rem] 2xl:text-7xl lg:text-5xl tracking-[-2%] uppercase text-blue-900 text-center mb-10">
         marketing that gets results
       </h1>
       <div className=" lg:space-y-7.5  space-y-4 flex flex-col items-center">
@@ -91,40 +91,40 @@ const ResultCard = () => {
           return (
             <div
               key={index}
-              className={`flex md:flex-row flex-col lg:w-[95%] lg:h-[33rem] w-full bg-white  lg:rounded-4xl rounded-2xl overflow-hidden`}
+              className={`flex md:flex-row flex-col xl:w-[95%] md:h-[18rem] xl:h-[27rem]  2xl:h-[33rem] lg:h-[22rem] w-full bg-white  xl:rounded-4xl rounded-2xl overflow-hidden`}
             >
               {isEven ? (
                 <>
-                  <div className="lg:pr-41 lg:pl-13.5 lg:py-20 px-3 py-6 flex-1 order-2 md:order-2">
-                    <div className=" lg:space-y-10  space-y-2 lg:mb-3 md:mb-1">
-                      <div className="flex flex-col lg:gap-7  gap-4 items-start">
+                  <div className="2xl:pr-41 xl:pr-10 lg:pl-13.5 2xl:py-20 lg:py-13 px-3 py-6 flex-1 order-2 md:order-2">
+                    <div className=" 2xl:space-y-10 xl:space-y-5  space-y-2 lg:mb-3 md:mb-1">
+                      <div className="flex flex-col 2xl:gap-7  gap-4 items-start">
                         <Image
                           src={item.icon}
                           alt="icon"
-                          className="w-auto lg:h-20  h-9 mb-1"
+                          className="w-auto 2xl:h-20 xl:h-15  h-9 mb-1"
                         />
-                        <h3 className="lg:text-6xl  text-2xl font-semibold uppercase font-futura text-blue-900   ">
+                        <h3 className="2xl:text-6xl xl:text-5xl lg:text-4xl  text-2xl font-semibold uppercase font-futura text-blue-900   ">
                           {item.heading}
                         </h3>
                       </div>
-                      <p className="text-textB lg:text-xl  text-sm mb-4 lg:w-[90%] w-[100%] leading-[150%] ">
+                      <p className="text-textB 2xl:text-xl lg:text-lg  text-sm mb-4 xl:w-[90%] w-[100%] leading-[150%] ">
                         {item.text}
                       </p>
                     </div>
 
                     <div className="flex items-center gap-3">
-                      <div className="flex items-center lg:gap-3 gap-4">
-                        <div className="flex lg:-space-x-3 md:-space-x-2 -space-x-1">
+                      <div className="flex items-center xl:gap-3 gap-4">
+                        <div className="flex xl:-space-x-3 md:-space-x-2 -space-x-1">
                           {item.avater.map((avt, i) => (
                             <Image
                               key={i}
                               src={avt}
                               alt="avatar"
-                              className="lg:w-12 lg:h-12 h-6 w-6 rounded-full border-2 border-white shadow"
+                              className="2xl:w-12 2xl:h-12 lg:w-9 lg:h-9 h-6 w-6 rounded-full border-2 border-white shadow"
                             />
-                          ))}
+                          ))} 
                         </div>
-                        <p className="lg:text-lg text-[1rem]  font-semibold  lg:font-bold  capitalize ">
+                        <p className="xl:text-lg text-[1rem]  font-semibold  lg:font-bold  capitalize ">
                           view real stories
                         </p>
                       </div>
@@ -135,16 +135,16 @@ const ResultCard = () => {
                     <Image
                       src={item.back}
                       alt={item.heading}
-                      className="lg:w-[42rem] lg:h-[37rem] h-[22.56rem] w-full  object-cover"
+                      className="xl:w-[32rem] xl:h-[27rem] 2xl:h-[37rem] 2xl:w-[37rem] md:h-full md:w-[18rem] lg:[h-22rem] lg:w-[22rem]  h-[22.56rem] w-full  object-cover"
                     />
-                    <div className="lg:w-[80%] w-[60%] absolute  bottom-12 mx-auto  lg:left-[10%] left-[20%] items-center justify-center flex ">
-                      <div className="absolute lg:-bottom-3 w-[96%] lg:h-30 h-full -bottom-[7px] left-[2%] right-0  bg-[#89C6D3] rounded-3xl z-1 last:hidden "></div>
-                      <div className="absolute lg:-bottom-6 w-[90%] lg:h-30 h-full -bottom-3 left-[5%] right-0  bg-[#4FAABE] rounded-3xl last:hidden  "></div>
+                    <div className="xl:w-[80%] w-[60%] absolute  bottom-12 mx-auto  xl:left-[10%] left-[20%] items-center justify-center flex ">
+                      <div className="absolute 2xl:-bottom-3 w-[96%] xl:h-full h-full -bottom-[7px] left-[2%] right-0  bg-[#89C6D3] rounded-3xl z-1 last:hidden "></div>
+                      <div className="absolute 2xl:-bottom-6 w-[90%] xl:h-full h-full -bottom-3 left-[5%] right-0  bg-[#4FAABE] rounded-3xl last:hidden  "></div>
                       <Image
                         src={item.miniImg}
                         id="miniImage"
                         alt="mini"
-                        className=" w-full h-auto lg:rounded-3xl rounded-xl z-1"
+                        className=" w-full h-auto xl:rounded-3xl rounded-xl z-1"
                       />
                     </div>
                   </div>
@@ -155,33 +155,33 @@ const ResultCard = () => {
                     <Image
                       src={item.back}
                       alt={item.heading}
-                      className="lg:w-[42rem] lg:h-[37rem] h-[22.56rem] w-full  object-cover"
+                      className="2xl:w-[42rem] 2xl:h-[37rem] xl:w-[32rem] xl:h-[27rem] md:h-full md:w-[18rem] lg:h-[22rem] lg:w-[22rem]  h-[22.56rem] w-full  object-cover"
                     />
-                    <div className="lg:w-[80%] w-[60%] absolute  bottom-12 mx-auto  lg:left-[10%] left-[20%] items-center justify-center flex ">
-                      <div className="absolute lg:-bottom-3 w-[96%] lg:h-30 h-full -bottom-[7px] left-[2%] right-0  bg-[#89C6D3] rounded-3xl z-1 last:hidden "></div>
-                      <div className="absolute lg:-bottom-6 w-[90%] lg:h-30 h-full -bottom-3 left-[5%] right-0  bg-[#4FAABE] rounded-3xl last:hidden  "></div>
+                    <div className="xl:w-[80%] w-[60%] absolute  bottom-12 mx-auto  xl:left-[10%] left-[20%] items-center justify-center flex ">
+                      <div className="absolute 2xl:-bottom-3 w-[96%] 2xl:h-full h-full -bottom-[7px] left-[2%] right-0  bg-[#89C6D3] rounded-3xl z-1 last:hidden "></div>
+                      <div className="absolute 2xl:-bottom-6 w-[90%] 2xl:h-full h-full -bottom-3 left-[5%] right-0  bg-[#4FAABE] rounded-3xl last:hidden  "></div>
                       <Image
                         src={item.miniImg}
                         id="miniImage"
                         alt="mini"
-                        className=" w-full h-auto lg:rounded-3xl rounded-xl z-1"
+                        className=" w-full h-auto xl:rounded-3xl rounded-xl z-1"
                       />
                     </div>
                   </div>
 
-                  <div className="lg:px-20 lg:py-20 px-7 py-7 flex-1 order-2 md:order-1">
-                    <div className=" lg:space-y-10  space-y-2 lg:mb-3 md:mb-1">
-                      <div className="flex flex-col lg:gap-7  gap-4 items-start">
+                  <div className="2xl:pr-41 xl:pr-10 lg:pl-13.5 2xl:py-20 lg:py-13 px-3 py-6 flex-1 order-2 md:order-1">
+                  <div className=" 2xl:space-y-10 xl:space-y-5  space-y-2 lg:mb-3 md:mb-1">
+                      <div className="flex flex-col xl:gap-7  gap-4 items-start">
                         <Image
                           src={item.icon}
                           alt="icon"
-                          className="w-auto lg:h-20  h-9 mb-1"
+                          className="w-auto 2xl:h-20 xl:h-15  h-9 mb-1"
                         />
-                        <h3 className="lg:text-6xl  text-2xl font-semibold uppercase font-futura text-blue-900   ">
+                        <h3 className="2xl:text-6xl xl:text-5xl lg:text-4xl  text-2xl font-semibold  uppercase font-futura text-blue-900   ">
                           {item.heading}
                         </h3>
                       </div>
-                      <p className="text-textB lg:text-xl  text-sm mb-4 lg:w-[90%] w-[100%] leading-[150%] ">
+                      <p className="text-textB 2xl:text-xl lg:text-lg  text-sm mb-4 xl:w-[90%] w-[100%] leading-[150%] ">
                         {item.text}
                       </p>
                     </div>
@@ -193,7 +193,7 @@ const ResultCard = () => {
                               key={i}
                               src={avt}
                               alt="avatar"
-                              className="lg:w-12 lg:h-12 h-6 w-6 rounded-full border-2 border-white shadow"
+                              className="2xl:w-12 2xl:h-12 lg:w-9 lg:h-9 h-6 w-6 rounded-full border-2 border-white shadow"
                             />
                           ))}
                         </div>

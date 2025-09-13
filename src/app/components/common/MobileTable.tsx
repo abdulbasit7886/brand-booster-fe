@@ -379,7 +379,7 @@ const MobileTable: React.FC = () => {
                   <span className="font-medium text-sm text-gray-800">
                     {row.label}
                   </span>
-                  <span className="text-xs text-gray-500  rounded-full w-4 h-4 flex items-center justify-center flex-shrink-0">
+                  <span className="text-xs text-gray-500   border-1 rounded-full w-4 h-4 flex items-center justify-center flex-shrink-0">
                     ?
                   </span>
                 </div>

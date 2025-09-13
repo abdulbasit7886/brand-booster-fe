@@ -7,7 +7,7 @@ import plusIcon from "../../asset/icons/plus-circle.svg";
 
 interface FAQItem {
   question: string;
-  answer: string;
+  answer: string[];
 }
 
 const Questionboard = () => {
@@ -22,11 +22,11 @@ const Questionboard = () => {
   const toggleFaqs = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
-
+  
   return (
     <div className="lg:w-[75%] w-[100%] h-auto mx-auto bg-white mt-11 flex flex-col items-center lg:rounded-4xl rounded-2xl lg:pb-10 py-5 ">
       <Dropdown links={link} />
-      <ul className="lg:flex hidden w-full lg:gap-4 lg:h-20 h-15 items-end justify-center lg:mx-auto border-b border-[#ccc] mb-5">
+      <ul className="md:flex hidden w-full lg:gap-4 lg:h-20 h-15 items-end justify-center lg:mx-auto border-b border-[#ccc] mb-5">
         {link.map((item, i) => {
           return (
             <li
@@ -49,7 +49,7 @@ const Questionboard = () => {
           return (
             <div
               key={index}
-              className={`flex flex-col lg:px-8 w-full py-5 px-2 rounded-3xl ${
+              className={`flex flex-col lg:px-8 w-full py-5 px-2 rounded-2xl ${
                 openIndex === index ? "bg-[#F5F5F5] py-5" : "bg-white"
               }`}
             >
@@ -75,9 +75,11 @@ const Questionboard = () => {
                 )}
               </div>
               {openIndex === index && (
-                <div className="transition-all mt-5 lg:text-lg text-xs lg:leading-7  lg:px-0 leading-5">
-                  <span>{Faq.answer}</span>
-                </div>
+                 <div className="transition-all mt-5 lg:text-lg text-sm lg:leading-7 lg:px-0 leading-5 space-y-3">
+                 {Faq.answer.map((ans, i) => (
+                   <p key={i}>{ans}</p>
+                 ))}
+               </div>
               )}
             </div>
           );

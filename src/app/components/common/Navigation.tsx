@@ -17,7 +17,7 @@ const Navigation = () => {
   return (
     <div className="lg:w-[91.1%] w-screen h-15 lg:h-20 z-100 font-Inter fixed px-5 lg:top-5 lg:left-[4.45%]   flex items-center justify-between lg:px-3 lg:pr-4 lg:pl-6 pr-6 pl-4 bg-white lg:rounded-[50px]">
       <div>
-        <Image src={logo} alt="" className="lg:h-16 lg:w-auto" />
+        <Image src={logo} alt="" className="lg:h-16 h-11 w-auto" />
       </div>
       <div
         className={`
@@ -55,12 +55,17 @@ const Navigation = () => {
               </li>
             );
           })}
+          <li className="flex items-center text-lg leading-[120%] gap-2 capitalize px-1.5 py-1 text-[#414651] cursor-pointer">
+            <span className="flex items-center justify-center text-[#414651] lg:hidden ">
+              get started
+            </span>
+          </li>
         </ul>
       </div>
       <div className="flex items-center gap-7">
         <div
           onClick={() => router.push("/coming-soon")}
-          className="flex items-center lg:w-[12.31rem] lg:h-15 w-[8.31rem] h-11 justify-center lg:gap-3 gap-1.5 cursor-pointer rounded-full bg-gradient-to-tr from-sky to-blue text-white hover:opacity-90 transition-opacity duration-200"
+          className="hidden lg:flex items-center lg:w-[12.31rem] lg:h-15 w-[8.31rem] h-11 justify-center lg:gap-3 gap-1.5 cursor-pointer rounded-full bg-gradient-to-tr from-sky to-blue text-white hover:opacity-90 transition-opacity duration-200"
         >
           <Image src={boostIcon} alt="" className="h-5 w-auto" />
           <p className="lg:text-xl text-[1rem]">Boost now</p>

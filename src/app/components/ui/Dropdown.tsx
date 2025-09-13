@@ -27,7 +27,7 @@ const Dropdown: React.FC<DropDownProps> = ({ links }) => {
 
   return (
     <>
-      <div className="lg:hidden flex items-center w-[90%] mx-auto h-14 bg-white rounded-xl border-1 border-[#D5D7DA] shadow-xs shadow-[#0A0D120D]">
+      <div className="md:hidden flex items-center w-[90%] mx-auto h-14 bg-white rounded-xl border-1 border-[#D5D7DA] shadow-xs shadow-[#0A0D120D]">
         <div
           className="flex items-center justify-between px-3.5 w-full cursor-pointer"
           onClick={handleOpenDrop}
