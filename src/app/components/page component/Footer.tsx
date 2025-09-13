@@ -9,7 +9,7 @@ import socialIcon2 from "../../asset/icons/link.svg";
 import socialIcon3 from "../../asset/icons/face.svg";
 import socialIcon4 from "../../asset/icons/insta.svg";
 
-type FooterLink = { to: string; name: string };
+type FooterLink = { to: string; name: string; blank?: boolean };
 type FooterSection = { heading: string; links: FooterLink[] };
 
 const footerLinks: FooterSection[] = [
@@ -37,12 +37,32 @@ const footerLinks: FooterSection[] = [
   {
     heading: "Policies",
     links: [
-      { to: "https://liplynig.com/general-terms", name: "Terms of Service" },
-      { to: "https://liplynig.com/privacy-policy", name: "Privacy Policy" },
-      { to: "https://liplynig.com/general-terms", name: "Refund Policy" },
+      {
+        to: "https://liplynig.com/general-terms",
+        name: "Terms of Service",
+        blank: true,
+      },
+      {
+        to: "https://liplynig.com/privacy-policy",
+        name: "Privacy Policy",
+        blank: true,
+      },
+      {
+        to: "https://liplynig.com/general-terms",
+        name: "Refund Policy",
+        blank: true,
+      },
       // { to: "/coming-soon", name: "Cookie Policy" },
-      { to: "https://liplynig.com/cookie-policy", name: "Cookie Consent" },
-      { to: "https://liplynig.com/disclaimer", name: "Disclaimer" },
+      {
+        to: "https://liplynig.com/cookie-policy",
+        name: "Cookie Consent",
+        blank: true,
+      },
+      {
+        to: "https://liplynig.com/disclaimer",
+        name: "Disclaimer",
+        blank: true,
+      },
     ],
   },
 ];
@@ -78,6 +98,8 @@ const Footer: React.FC = () => {
                   <li key={i}>
                     <Link
                       href={link.to}
+                      target={link?.blank ? "_blank" : "_self"}
+                      rel={link?.blank ? "noopener noreferrer" : undefined}
                       className="text-[#94979C] hover:text-white text-sm lg:text-base transition capitalize"
                     >
                       {link.name}
