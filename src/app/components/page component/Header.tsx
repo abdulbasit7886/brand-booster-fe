@@ -194,7 +194,8 @@ const Header: React.FC = () => {
             <div className="lg:gap-6 gap-3 flex flex-col">
               <h1
                 className="font-futura font-bold uppercase text-blue-900 
-                text-4xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-8xl tracking-[-2%] leading-tight"
+                text-4xl md:text-4xl lg:text-5xl xl:text-5xl 2xl:text-8xl  between-xl:text-8xl
+                  tracking-[-2%] leading-tight"
               >
                 your brand on 200+ news sites
               </h1>

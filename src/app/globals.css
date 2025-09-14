@@ -33,6 +33,9 @@
   --color-green: #17b26a;
   
   --radius-full: 50px;
+
+  /* width */
+  --breakpoint-between-xl: 1747px;
 }
 
 
@@ -42,4 +45,16 @@ body {
   color: var(--color-textD);
   margin: 0;
   padding:0;
+}
+@media (min-width: 1536px) and (max-width: 1746px) {
+  .custom-text-6xl {
+      font-size: 3.75rem;
+      line-height: 1;
+  }
+}
+@media (min-width: 1747px) {
+  .custom-text-8xl {
+      font-size: 6rem;
+      line-height: 1;
+  }
 }
